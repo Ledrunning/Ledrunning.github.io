@@ -1,13 +1,10 @@
 export const bio = [
-    `With over 10 years of expertise, I am a seasoned software
-    developer skilled in C# .NET frameworks, web development,
-    design microservices, and desktop applications across GTK+,
-    Windows Forms, WPF, and UWP. Transitioning from a solid
-    foundation in electronics engineering focused on embedded
-    systems, I merge interdisciplinary knowledge to offer unique
-    solutions. I bring a blend of cutting-edge techniques and
-    robust experience to drive innovation and efficiency to a
-    dynamic tech environment.`,
+    `With over 10 years of expertise, I have developed a range of software solutions for various domains, such as healthcare, 
+    fintech, aviation, and industrial engineering. I have expertise in web development, desktop applications, and embedded systems, 
+    using C#, .NET frameworks, and other technologies. My background in electronics engineering enables 
+    me to combine interdisciplinary knowledge and apply it to complex and innovative projects. 
+    I am passionate about learning new skills and exploring new challenges. Currently, I am studying German language and contributing to open source development. 
+    I am also interested in artificial intelligence, computer vision, cloud computing, and electronics.`,
 ];
 
 export const skills = [
