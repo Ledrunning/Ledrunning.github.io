@@ -76,3 +76,29 @@ export const skills = [
         percentage: "70",
     },
 ];
+
+export const education = [
+    {
+        title: "Biomedical electronics - Master Degree",
+        duration: "2008 - 2009",
+        subtitle: "Sevastopol State Technical University",
+        details: [],
+        tags: [
+            "Digital & Analog electronics",
+            "Microcontrollers",
+            "Firmware development",
+            "Medical devices design",
+            "Bioelectronics",
+            "Semiconductors",
+        ],
+        icon: "graduation-cap",
+    },
+    {
+        title: "Bachelor's degree in Electronics",
+        duration: "2003 - 2008",
+        subtitle: "Sevastopol State Technical University",
+        details: [],
+        tags: ["Physics", "Circuit design", "Power electronics", "PCB Route", "Mathematics"],
+        icon: "book",
+    },
+];
