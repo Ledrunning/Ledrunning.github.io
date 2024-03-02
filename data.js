@@ -16,8 +16,7 @@ export const skills = [
     },
     {
         title: "Frameworks/Libraries",
-        skillName: `.NET Core 3.1, 5, 6, 7, .NET Framework
-                    4.6, 4.7, 4.8, ASP.NET Core, Vue.js`,
+        skillName: `.NET Core, .NET Framework, Vue.js`,
         color: "6",
         percentage: "85",
     },
