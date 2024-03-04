@@ -9,7 +9,7 @@ import {
 
 import { URLs } from './user-data/urls.js';
   
-  const { webProjects, softwareProjects, androidProjects, freelanceProjects } =
+  const { webProjects, softwareProjects, androidProjects } =
     projects;
   const { medium, gitConnected } = URLs;
   
@@ -341,7 +341,7 @@ import { URLs } from './user-data/urls.js';
       iFa.className = "fa fa-" + items[i].icon;
   
       let divTimelineIcon = document.createElement("div");
-      divTimelineIcon.className = "timeline-icon color-2";
+      divTimelineIcon.className = "timeline-icon color-5";
       divTimelineIcon.append(iFa);
   
       let divTimelineEntryInner = document.createElement("div");
@@ -357,7 +357,7 @@ import { URLs } from './user-data/urls.js';
     }
   
     let divTimelineIcon = document.createElement("div");
-    divTimelineIcon.className = "timeline-icon color-2";
+    divTimelineIcon.className = "timeline-icon color-5";
   
     let divTimelineEntryInner = document.createElement("div");
     divTimelineEntryInner.className = "timeline-entry-inner";
