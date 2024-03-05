@@ -2249,4 +2249,10 @@ span {
     text-align: right;
     font-weight: 600;
 }
+
+/* override a badge background-color from bootstrap */
+.badge {
+    background-color:#2fa499;
+}
+
   
