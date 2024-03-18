@@ -111,27 +111,27 @@ export const education = [
 export const projects = {
   webProjects: [
     {
-      projectName: "",
+      projectName: "Image-Uploader",
       image: "",
-      summary: "",
+      summary: " The application allows users to upload images to the server and view them on a desktop application.",
       preview: "",
-      techStack: ["", "", "", ""],
+      techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
     },
     {
-      projectName: "",
+      projectName: "githubvue",
       image: "",
-      summary: "",
+      summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
       preview: "",
-      techStack: ["", "", "", ""],
+      techStack: ["Vue.js", "HTML", "CSS", "REST API"],
     },
   ],
   softwareProjects: [
     {
-      projectName: "",
+      projectName: "Employees Accounting",
       image: "",
-      summary: "",
+      summary: "Client-server application designed for employee accounting utilizing face detection technology.",
       preview: "",
-      techStack: ["", ""],
+      techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
     },
   ],
   androidProjects: [
