@@ -111,9 +111,25 @@ export const education = [
 export const projects = {
   webProjects: [
     {
+      projectName: "Bitcoin Query",
+      image: "",
+      summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar",
+      preview: "",
+      techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
+    },
+    {
+      projectName: "Airplane Simulation Trajectory",
+      image: "",
+      summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
+                "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
+                "providing an immersive experience of tracking the path of an airplane.",
+      preview: "",
+      techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
+    },
+    {
       projectName: "Image-Uploader",
       image: "",
-      summary: " The application allows users to upload images to the server and view them on a desktop application.",
+      summary: "The application allows users to upload images to the server and view them on a desktop application.",
       preview: "",
       techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
     },
