@@ -118,15 +118,6 @@ export const projects = {
       techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
     },
     {
-      projectName: "Airplane Simulation Trajectory",
-      image: "",
-      summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
-                "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
-                "providing an immersive experience of tracking the path of an airplane.",
-      preview: "",
-      techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
-    },
-    {
       projectName: "Image-Uploader",
       image: "",
       summary: "The application allows users to upload images to the server and view them on a desktop application.",
@@ -148,6 +139,30 @@ export const projects = {
       summary: "Client-server application designed for employee accounting utilizing face detection technology.",
       preview: "",
       techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
+    },
+    {
+      projectName: "Airplane Simulation Trajectory",
+      image: "",
+      summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
+                "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
+                "providing an immersive experience of tracking the path of an airplane.",
+      preview: "",
+      techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
+    },
+    {
+      projectName: "VideoBroadcast",
+      image: "",
+      summary: "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." + 
+               "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
+      preview: "",
+      techStack: ["C#", "Windows Forms", ".NET Framework 4.6", "VLC", "RTP/RTSP", "HTTP"],
+    },
+    {
+      projectName: "FacialDetection",
+      image: "",
+      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu", 
+      preview: "",
+      techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
     },
   ],
   androidProjects: [
@@ -353,7 +368,7 @@ export const footer = [
   {
     label: "copyright-text",
     data: [
-      "Made with &hearts; by Vinay Somawat.",
+      "The core powered by Vinay Somawat.",
       "&copy; No Copyrights. Feel free to use this template.",
       "The template was taken from Vinay Somawat <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>link text</a>",
     ],
