@@ -112,10 +112,33 @@ export const projects = {
   webProjects: [
     {
       projectName: "Bitcoin Query",
-      image: "",
+      image: "images/bitcoinQuery.png",
       summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar",
-      preview: "",
+      preview: "https://github.com/Ledrunning/BitcoinQuery",
       techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
+    },
+    {
+      projectName: "Image-Uploader",
+      image: "images/imageUploader.png",
+      summary: "The application allows users to upload images to the server and view them on a desktop application.",
+      preview: "https://github.com/Ledrunning/Image-Uploader",
+      techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
+    },
+    {
+      projectName: "githubvue",
+      image: "images/githubVue.png",
+      summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
+      preview: "https://github.com/Ledrunning/githubvue",
+      techStack: ["Vue.js", "HTML", "CSS", "REST API"],
+    },
+  ],
+  softwareProjects: [
+    {
+      projectName: "Employees Accounting",
+      image: "",
+      summary: "Client-server application designed for employee accounting utilizing face detection technology.",
+      preview: "",
+      techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
     },
     {
       projectName: "Airplane Simulation Trajectory",
@@ -127,27 +150,28 @@ export const projects = {
       techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
     },
     {
-      projectName: "Image-Uploader",
+      projectName: "VideoBroadcast",
       image: "",
-      summary: "The application allows users to upload images to the server and view them on a desktop application.",
+      summary: "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." + 
+               "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
       preview: "",
-      techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
+      techStack: ["C#", "Windows Forms", ".NET Framework 4.6", "VLC", "RTP/RTSP", "HTTP"],
     },
     {
-      projectName: "githubvue",
+      projectName: "FacialDetection",
       image: "",
-      summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
+      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu", 
       preview: "",
-      techStack: ["Vue.js", "HTML", "CSS", "REST API"],
+      techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
     },
-  ],
-  softwareProjects: [
     {
-      projectName: "Employees Accounting",
+      projectName: "WiFiOutdoorSensor",
       image: "",
-      summary: "Client-server application designed for employee accounting utilizing face detection technology.",
+      summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
+               "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
+               "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
       preview: "",
-      techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
+      techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
     },
   ],
   androidProjects: [
@@ -353,7 +377,7 @@ export const footer = [
   {
     label: "copyright-text",
     data: [
-      "Made with &hearts; by Vinay Somawat.",
+      "The core powered by Vinay Somawat.",
       "&copy; No Copyrights. Feel free to use this template.",
       "The template was taken from Vinay Somawat <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>link text</a>",
     ],
