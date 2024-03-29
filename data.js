@@ -112,23 +112,23 @@ export const projects = {
   webProjects: [
     {
       projectName: "Bitcoin Query",
-      image: "",
+      image: "images/bitcoinQuery.png",
       summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar",
-      preview: "",
+      preview: "https://github.com/Ledrunning/BitcoinQuery",
       techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
     },
     {
       projectName: "Image-Uploader",
-      image: "",
+      image: "images/imageUploader.png",
       summary: "The application allows users to upload images to the server and view them on a desktop application.",
-      preview: "",
+      preview: "https://github.com/Ledrunning/Image-Uploader",
       techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
     },
     {
       projectName: "githubvue",
-      image: "",
+      image: "images/githubVue.png",
       summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
-      preview: "",
+      preview: "https://github.com/Ledrunning/githubvue",
       techStack: ["Vue.js", "HTML", "CSS", "REST API"],
     },
   ],
@@ -163,6 +163,15 @@ export const projects = {
       summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu", 
       preview: "",
       techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
+    },
+    {
+      projectName: "WiFiOutdoorSensor",
+      image: "",
+      summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
+               "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
+               "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
+      preview: "",
+      techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
     },
   ],
   androidProjects: [
