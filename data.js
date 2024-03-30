@@ -113,7 +113,7 @@ export const projects = {
     {
       projectName: "Bitcoin Query",
       image: "images/bitcoinQuery.png",
-      summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar",
+      summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar.",
       preview: "https://github.com/Ledrunning/BitcoinQuery",
       techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
     },
@@ -135,46 +135,60 @@ export const projects = {
   softwareProjects: [
     {
       projectName: "Employees Accounting",
-      image: "",
+      image: "images/empAccounting.png",
       summary: "Client-server application designed for employee accounting utilizing face detection technology.",
-      preview: "",
+      preview: "https://github.com/Ledrunning/EmployeesAccounting",
       techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
     },
     {
       projectName: "Airplane Simulation Trajectory",
-      image: "",
+      image: "images/aircraftTrajectory.png",
       summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
                 "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
                 "providing an immersive experience of tracking the path of an airplane.",
-      preview: "",
+      preview: "https://github.com/Ledrunning/AirplaneSimulationTrajectory",
       techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
     },
     {
       projectName: "VideoBroadcast",
-      image: "",
+      image: "images/videoBroadcast.png",
       summary: "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." + 
                "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
-      preview: "",
+      preview: "https://github.com/Ledrunning/VideoBroadcast",
       techStack: ["C#", "Windows Forms", ".NET Framework 4.6", "VLC", "RTP/RTSP", "HTTP"],
     },
     {
       projectName: "FacialDetection",
-      image: "",
-      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu", 
-      preview: "",
+      image: "images/faceDetection.jpg",
+      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu.", 
+      preview: "https://github.com/Ledrunning/FacialDetection",
       techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
     },
     {
       projectName: "WiFiOutdoorSensor",
-      image: "",
+      image: "/images/wifiOutdoorSens.png",
       summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
                "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
                "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
-      preview: "",
+      preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
       techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
     },
+    {
+      projectName: "TinnyMonitor",
+      image: "images/tinnyMonitor.png",
+      summary: "Desktop application for the hardware weather station.",
+      preview: "https://github.com/Ledrunning/TinnyMonitor",
+      techStack: ["Windows Forms", "MVP", "C#", "OxyPlot"],
+    },
+    {
+      projectName: "uMap",
+      image: "uMap.png",
+      summary: "Simple WPF MVVM application to display a world map using Open Street Map provider.",
+      preview: "https://github.com/Ledrunning/uMap",
+      techStack: ["WPF", "MVVM", "Desktop", "C#", "OpenStreetMap"],
+    },
   ],
-  androidProjects: [
+  embeddedProjects: [
     {
       projectName: "",
       image: "",
