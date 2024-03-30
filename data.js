@@ -207,7 +207,7 @@ export const projects = {
     },
     {
       projectName: "RaspberryPi_expansion_card",
-      image: "clock.png",
+      image: "rpiboard.png",
       summary: "A simple expansion board for RaspberryPi",
       preview: "https://github.com/Ledrunning/RaspberryPi_expansion_card",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
