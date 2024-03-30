@@ -190,11 +190,27 @@ export const projects = {
   ],
   embeddedProjects: [
     {
-      projectName: "",
-      image: "",
-      summary: "",
-      preview: "",
-      techStack: ["", "", ""],
+      projectName: "animationClock",
+      image: "Animation clock on STM32 + ILI9341",
+      summary: "clock.png",
+      preview: "https://github.com/Ledrunning/animationClock",
+      techStack: ["C", "STM32", "Keil", "Hardware", "PCB", "Microcontrollers"],
+    },
+    {
+      projectName: "tiny_thermometer",
+      image: "A simple temperature and humidity meter displaying values on an 8x2 LCD using" + 
+             "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
+             "The firmware is written in C language in Atmel Studio 7",
+      summary: "thermometer.png",
+      preview: "https://github.com/Ledrunning/tiny_thermometer",
+      techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
+    },
+    {
+      projectName: "RaspberryPi_expansion_card",
+      image: "A simple expansion board for RaspberryPi",
+      summary: "clock.png",
+      preview: "https://github.com/Ledrunning/RaspberryPi_expansion_card",
+      techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
   ],
 };
