@@ -13,7 +13,7 @@ The inspiration for this portfolio came from a wonderful project created by [vin
 
 ## Getting Started
 
-To explore my portfolio, simply visit [Just Portfolio](#) and navigate through the sections and projects.
+To explore my portfolio, simply visit [Just Portfolio](https://osmanmazinov.github.io/) and navigate through the sections and projects.
 
 ## Feedback
 
