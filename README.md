@@ -1,7 +1,29 @@
-# just-portfolio
+# Just Portfolio
 
-In this repository I will endeavour to reflect my skills and experience, as well as my coding journey.
+Welcome to my Just Portfolio repository! Here, I showcase my skills, experience, and coding journey through various projects and works.
 
-As well as some of my works and projects as a portfolio.
+## Overview
 
-As a basis I took a wonderful project : https://github.com/vinaysomawat/vinaysomawat.github.io
+This repository serves as a platform where I present my skills in JavaScript and web development. It contains a collection of projects and works that highlight my abilities and experience.
+
+## Inspiration
+
+The inspiration for this portfolio came from a wonderful project created by [vinaysomawat](https://github.com/vinaysomawat/vinaysomawat.github.io). Their project served as the foundation for my portfolio, which I customized and adapted to reflect my style, skills, and journey.
+
+
+## Getting Started
+
+To explore my portfolio, simply visit [Just Portfolio](#) and navigate through the sections and projects.
+
+## Feedback
+
+I appreciate any feedback or suggestions! Feel free to create an issue or contact me directly with your thoughts.
+
+## Contact
+
+You can reach me at:
+
+- Email: [ledrunner@hotmail.com](ledrunner@hotmail.com)
+- LinkedIn: [My Profile](https://www.linkedin.com/in/osman-mazinov-lennarovich/)
+
+Thank you for visiting my portfolio!
