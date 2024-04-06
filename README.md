@@ -23,7 +23,7 @@ I appreciate any feedback or suggestions! Feel free to create an issue or contac
 
 You can reach me at:
 
-- Email: [your.email@example.com]mazzinov@gmail.com)
+- Email: [your.email@example.com](mazzinov@gmail.com)
 - LinkedIn: [Your LinkedIn Profile]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/osman-mazinov-lennarovich/))
 - Personal Website: [Your Personal Website](https://yourwebsite.com)
 
