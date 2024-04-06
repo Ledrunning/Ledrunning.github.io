@@ -23,8 +23,7 @@ I appreciate any feedback or suggestions! Feel free to create an issue or contac
 
 You can reach me at:
 
-- Email: [gmail](mazzinov@gmail.com)
+- Email: [ledrunner@hotmail.com](ledrunner@hotmail.com)
 - LinkedIn: [Your LinkedIn Profile]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/osman-mazinov-lennarovich/))
-- Personal Website: [Your Personal Website](https://yourwebsite.com)
 
 Thank you for visiting my portfolio!
