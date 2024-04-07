@@ -271,9 +271,7 @@
 var Accordion = function (el, multiple) {
   this.el = el || {};
   this.multiple = multiple || false;
-  // Variables privadas
   var links = this.el.find(".link");
-  // Evento
   links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
 };
 
@@ -295,12 +293,12 @@ function enableDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
 
+const SixAm = 6;
+const EightPm = 20;
+
 function detectDayNightMode() {
   const hours = new Date().getHours();
-  const isDayTime = hours > 6 && hours < 20;
-  if (isDayTime === true) {
-    // do nothing
-  } else {
+  if (!(hours > SixAm && hours < EightPm)) {
     enableDarkMode();
   }
 }
