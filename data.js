@@ -181,7 +181,7 @@ export const projects = {
       techStack: ["Windows Forms", "MVP", "C#", "OxyPlot"],
     },
     {
-      projectName: "uMap",
+      projectName: "images/uMap",
       image: "uMap.png",
       summary: "Simple WPF MVVM application to display a world map using Open Street Map provider.",
       preview: "https://github.com/Ledrunning/uMap",
@@ -191,13 +191,13 @@ export const projects = {
   embeddedProjects: [
     {
       projectName: "animationClock",
-      image: "clock.png",
+      image: "images/clock.png",
       summary: "Animation clock on STM32 + ILI9341",
       preview: "https://github.com/Ledrunning/animationClock",
       techStack: ["C", "STM32", "Keil", "Hardware", "PCB", "Microcontrollers"],
     },
     {
-      projectName: "tiny_thermometer",
+      projectName: "images/tiny_thermometer",
       image: "thermometer.png",
       summary: "A simple temperature and humidity meter displaying values on an 8x2 LCD using" + 
       "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
@@ -207,7 +207,7 @@ export const projects = {
     },
     {
       projectName: "RaspberryPi_expansion_card",
-      image: "rpiboard.png",
+      image: "images/rpiboard.png",
       summary: "A simple expansion board for RaspberryPi",
       preview: "https://github.com/Ledrunning/RaspberryPi_expansion_card",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
