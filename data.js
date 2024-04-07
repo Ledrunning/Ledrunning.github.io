@@ -78,7 +78,7 @@ export const skills = [
 
 export const education = [
   {
-    title: "Teilnehmer an Deutschkursen",
+    title: "Participants of German language courses",
     duration: "2023 - Current",
     subtitle: "Milling Sprachenschulen - Milling GmbH",
     details: [],
