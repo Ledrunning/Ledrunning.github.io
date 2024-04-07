@@ -74,6 +74,12 @@ export const skills = [
     color: "6",
     percentage: "100",
   },
+  {
+    title: "Protocols",
+    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN",
+    color: "1",
+    percentage: "80",
+  },
 ];
 
 export const education = [
