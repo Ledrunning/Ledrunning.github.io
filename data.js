@@ -166,7 +166,7 @@ export const projects = {
     },
     {
       projectName: "WiFiOutdoorSensor",
-      image: "/images/wifiOutdoorSens.png",
+      image: "images/wifiOutdoorSens.png",
       summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
                "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
                "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
