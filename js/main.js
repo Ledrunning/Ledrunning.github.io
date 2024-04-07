@@ -1,36 +1,51 @@
 (function () {
   "use strict";
 
-  const isMobile = {
-    Android: () => navigator.userAgent.match(/Android/i),
-    BlackBerry: () => navigator.userAgent.match(/BlackBerry/i),
-    iOS: () => navigator.userAgent.match(/iPhone|iPad|iPod/i),
-    Opera: () => navigator.userAgent.match(/Opera Mini/i),
-    Windows: () => navigator.userAgent.match(/IEMobile/i),
-    any: () =>
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows(),
+  var isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
   };
 
-  const fullHeight = () => {
+  var fullHeight = function () {
     if (!isMobile.any()) {
-      const setHeight = () =>
+      $(".js-fullheight").css("height", $(window).height());
+      $(window).resize(function () {
         $(".js-fullheight").css("height", $(window).height());
-      setHeight();
-      $(window).resize(setHeight);
+      });
     }
   };
 
-  const counter = () => {
+  var counter = function () {
     $(".js-counter").countTo({
-      formatter: (value, options) => value.toFixed(options.decimals),
+      formatter: function (value, options) {
+        return value.toFixed(options.decimals);
+      },
     });
   };
 
-  const counterWayPoint = () => {
+  var counterWayPoint = function () {
     if ($("#colorlib-counter").length > 0) {
       $("#colorlib-counter").waypoint(
         function (direction) {
@@ -44,18 +59,32 @@
     }
   };
 
-  const contentWayPoint = () => {
+  // Animations
+  var contentWayPoint = function () {
+    var i = 0;
     $(".animate-box").waypoint(
       function (direction) {
         if (direction === "down" && !$(this.element).hasClass("animated")) {
+          i++;
+
           $(this.element).addClass("item-animate");
-          setTimeout(() => {
+          setTimeout(function () {
             $("body .animate-box.item-animate").each(function (k) {
-              const el = $(this);
+              var el = $(this);
               setTimeout(
-                () => {
-                  const effect = el.data("animate-effect");
-                  el.addClass(`${effect} animated`).removeClass("item-animate");
+                function () {
+                  var effect = el.data("animate-effect");
+                  if (effect === "fadeIn") {
+                    el.addClass("fadeIn animated");
+                  } else if (effect === "fadeInLeft") {
+                    el.addClass("fadeInLeft animated");
+                  } else if (effect === "fadeInRight") {
+                    el.addClass("fadeInRight animated");
+                  } else {
+                    el.addClass("fadeInUp animated");
+                  }
+
+                  el.removeClass("item-animate");
                 },
                 k * 200,
                 "easeInOutExpo"
@@ -68,59 +97,58 @@
     );
   };
 
-  const burgerMenu = () => {
+  var burgerMenu = function () {
     $(".js-colorlib-nav-toggle").on("click", function (event) {
       event.preventDefault();
-      const $this = $(this);
-      const body = $("body");
+      var $this = $(this);
 
-      if (body.hasClass("offcanvas")) {
+      if ($("body").hasClass("offcanvas")) {
         $this.removeClass("active");
-        body.removeClass("offcanvas");
+        $("body").removeClass("offcanvas");
       } else {
         $this.addClass("active");
-        body.addClass("offcanvas");
+        $("body").addClass("offcanvas");
       }
     });
   };
 
-  const mobileMenuOutsideClick = () => {
-    $(document).click((e) => {
-      const container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+  // Click outside of offcanvass
+  var mobileMenuOutsideClick = function () {
+    $(document).click(function (e) {
+      var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
-        const body = $("body");
-        if (body.hasClass("offcanvas")) {
-          body.removeClass("offcanvas");
+        if ($("body").hasClass("offcanvas")) {
+          $("body").removeClass("offcanvas");
           $(".js-colorlib-nav-toggle").removeClass("active");
         }
       }
     });
 
-    $(window).scroll(() => {
-      const body = $("body");
-      if (body.hasClass("offcanvas")) {
-        body.removeClass("offcanvas");
+    $(window).scroll(function () {
+      if ($("body").hasClass("offcanvas")) {
+        $("body").removeClass("offcanvas");
         $(".js-colorlib-nav-toggle").removeClass("active");
       }
     });
   };
 
-  const clickMenu = () => {
-    $('#navbar a:not([class="external"])').click((event) => {
-      const section = $(event.currentTarget).data("nav-section");
-      const navbar = $("#navbar");
+  var clickMenu = function () {
+    $('#navbar a:not([class="external"])').click(function (event) {
+      var section = $(this).data("nav-section"),
+        navbar = $("#navbar");
 
-      if ($(`[data-section="${section}"]`).length) {
+      if ($('[data-section="' + section + '"]').length) {
         $("html, body").animate(
           {
-            scrollTop: $(`[data-section="${section}"]`).offset().top - 55,
+            scrollTop: $('[data-section="' + section + '"]').offset().top - 55,
           },
           500
         );
       }
 
       if (navbar.is(":visible")) {
-        navbar.removeClass("in").attr("aria-expanded", "false");
+        navbar.removeClass("in");
+        navbar.attr("aria-expanded", "false");
         $(".js-colorlib-nav-toggle").removeClass("active");
       }
 
@@ -129,19 +157,20 @@
     });
   };
 
-  const navActive = (section) => {
-    const $el = $("#navbar > ul");
+  // Reflect scrolling in navigation
+  var navActive = function (section) {
+    var $el = $("#navbar > ul");
     $el.find("li").removeClass("active");
     $el.each(function () {
       $(this)
-        .find(`a[data-nav-section="${section}"]`)
+        .find('a[data-nav-section="' + section + '"]')
         .closest("li")
         .addClass("active");
     });
   };
 
-  const navigationSection = () => {
-    const $section = $("section[data-section]");
+  var navigationSection = function () {
+    var $section = $("section[data-section]");
 
     $section.waypoint(
       function (direction) {
@@ -149,7 +178,9 @@
           navActive($(this.element).data("section"));
         }
       },
-      { offset: "150px" }
+      {
+        offset: "150px",
+      }
     );
 
     $section.waypoint(
@@ -166,13 +197,13 @@
     );
   };
 
-  const sliderMain = () => {
+  var sliderMain = function () {
     $("#colorlib-hero .flexslider").flexslider({
       animation: "fade",
       slideshowSpeed: 5000,
       directionNav: true,
       start: function () {
-        setTimeout(() => {
+        setTimeout(function () {
           $(".slider-text").removeClass("animated fadeInUp");
           $(".flex-active-slide")
             .find(".slider-text")
@@ -180,7 +211,7 @@
         }, 500);
       },
       before: function () {
-        setTimeout(() => {
+        setTimeout(function () {
           $(".slider-text").removeClass("animated fadeInUp");
           $(".flex-active-slide")
             .find(".slider-text")
@@ -190,37 +221,46 @@
     });
   };
 
-  const stickyFunction = () => {
-    const setHeight = () => {
-      const h = $(".image-content").outerHeight();
-      $(".sticky-parent").css("height", h);
-    };
+  var stickyFunction = function () {
+    var h = $(".image-content").outerHeight();
 
-    const handleResize = () => {
-      setHeight();
-      const windowWidth = $(window).width();
-      if (windowWidth <= 992) {
+    if ($(window).width() <= 992) {
+      $("#sticky_item").trigger("sticky_kit:detach");
+    } else {
+      $(".sticky-parent").removeClass("stick-detach");
+      $("#sticky_item").trigger("sticky_kit:detach");
+      $("#sticky_item").trigger("sticky_kit:unstick");
+    }
+
+    $(window).resize(function () {
+      var h = $(".image-content").outerHeight();
+      $(".sticky-parent").css("height", h);
+
+      if ($(window).width() <= 992) {
         $("#sticky_item").trigger("sticky_kit:detach");
       } else {
         $(".sticky-parent").removeClass("stick-detach");
         $("#sticky_item").trigger("sticky_kit:detach");
         $("#sticky_item").trigger("sticky_kit:unstick");
+
         $("#sticky_item").stick_in_parent();
       }
-    };
+    });
 
-    $(window).resize(handleResize);
-    handleResize();
+    $(".sticky-parent").css("height", h);
   };
 
+  // Document on load.
   $(function () {
     fullHeight();
     counter();
     counterWayPoint();
     contentWayPoint();
     burgerMenu();
+
     clickMenu();
     navigationSection();
+
     mobileMenuOutsideClick();
     sliderMain();
     stickyFunction();
@@ -228,36 +268,33 @@
   });
 })();
 
-class Accordion {
-  constructor(el, multiple) {
-    this.el = el || {};
-    this.multiple = multiple || false;
-    const links = this.el.find(".link");
-    links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
+var Accordion = function (el, multiple) {
+  this.el = el || {};
+  this.multiple = multiple || false;
+  var links = this.el.find(".link");
+  links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
+};
+
+Accordion.prototype.dropdown = function (e) {
+  var $el = e.data.el;
+  ($this = $(this)), ($next = $this.next());
+
+  $next.slideToggle();
+  $this.parent().toggleClass("open");
+
+  if (!e.data.multiple) {
+    $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
   }
+};
 
-  dropdown(e) {
-    const $el = e.data.el;
-    const $this = $(this);
-    const $next = $this.next();
-
-    $next.slideToggle();
-    $this.parent().toggleClass("open");
-
-    if (!e.data.multiple) {
-      $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
-    }
-  }
-}
-
-const accordion = new Accordion($("#accordion"), false);
-
-const SixAm = 6;
-const EightPm = 20;
+var accordion = new Accordion($("#accordion"), false);
 
 function enableDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
+
+const SixAm = 6;
+const EightPm = 20;
 
 function detectDayNightMode() {
   const hours = new Date().getHours();
