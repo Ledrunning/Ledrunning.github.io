@@ -228,6 +228,13 @@ export const projects = {
       image: "images/rpiboard.png",
       summary: "A simple expansion board for RaspberryPi",
       preview: "https://github.com/Ledrunning/RaspberryPi_expansion_card",
+      techStack: ["Python", "Raspberry Pi", "Hardware", "PCB"],
+    },
+    {
+      projectName: "LightController",
+      image: "images/lightController.png",
+      summary: "Open source project to control light in the room, garage, street, house etc",
+      preview: "https://github.com/Ledrunning/LightController",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
   ],
