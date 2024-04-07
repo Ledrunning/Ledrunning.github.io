@@ -181,8 +181,8 @@ export const projects = {
       techStack: ["Windows Forms", "MVP", "C#", "OxyPlot"],
     },
     {
-      projectName: "images/uMap",
-      image: "uMap.png",
+      projectName: "uMap",
+      image: "images/uMap.png",
       summary: "Simple WPF MVVM application to display a world map using Open Street Map provider.",
       preview: "https://github.com/Ledrunning/uMap",
       techStack: ["WPF", "MVVM", "Desktop", "C#", "OpenStreetMap"],
@@ -197,8 +197,8 @@ export const projects = {
       techStack: ["C", "STM32", "Keil", "Hardware", "PCB", "Microcontrollers"],
     },
     {
-      projectName: "images/tiny_thermometer",
-      image: "thermometer.png",
+      projectName: "tiny_thermometer",
+      image: "images/thermometer.png",
       summary: "A simple temperature and humidity meter displaying values on an 8x2 LCD using" + 
       "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
       "The firmware is written in C language in Atmel Studio 7",
