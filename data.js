@@ -78,6 +78,18 @@ export const skills = [
 
 export const education = [
   {
+    title: "Teilnehmer an Deutschkursen",
+    duration: "2023 - Current",
+    subtitle: "Milling Sprachenschulen - Milling GmbH",
+    details: [],
+    tags: [
+      "Sprachschule",
+      "Deutsch",
+      "Deutsche Sprache",
+    ],
+    icon: "book",
+  },
+  {
     title: "Biomedical electronics - Master Degree",
     duration: "2008 - 2009",
     subtitle: "Sevastopol State Technical University",
@@ -216,6 +228,25 @@ export const projects = {
 };
 
 export const experience = [
+  {
+    title: "Open Source Development",
+    duration: "Oct 2022 - Current",
+    subtitle: "Software Developer",
+    details: [
+      "Contributing to open-source projects and maintaining my GitHub repositories;",
+      "Developing personal projects and creating side projects;",
+    ],
+    tags: [
+      "TypeScript",
+      "Vue.js",
+      "Bootstrap",
+      ".NET Core MVC",
+      ".NET6",
+      "MSSQL",
+      "Razor",
+    ],
+    icon: "truck ",
+  },
   {
     title: "Arsis",
     duration: "Jul 2022 - Oct 2022",
