@@ -1,34 +1,21 @@
 (function () {
   "use strict";
 
-  var isMobile = {
-    Android: function () {
-      return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function () {
-      return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function () {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function () {
-      return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function () {
-      return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function () {
-      return (
-        isMobile.Android() ||
-        isMobile.BlackBerry() ||
-        isMobile.iOS() ||
-        isMobile.Opera() ||
-        isMobile.Windows()
-      );
-    },
+  const isMobile = {
+    Android: () => navigator.userAgent.match(/Android/i),
+    BlackBerry: () => navigator.userAgent.match(/BlackBerry/i),
+    iOS: () => navigator.userAgent.match(/iPhone|iPad|iPod/i),
+    Opera: () => navigator.userAgent.match(/Opera Mini/i),
+    Windows: () => navigator.userAgent.match(/IEMobile/i),
+    any: () =>
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows(),
   };
 
-  var fullHeight = function () {
+  const fullHeight = () => {
     if (!isMobile.any()) {
       $(".js-fullheight").css("height", $(window).height());
       $(window).resize(function () {
@@ -37,7 +24,7 @@
     }
   };
 
-  var counter = function () {
+  const counter = () => {
     $(".js-counter").countTo({
       formatter: function (value, options) {
         return value.toFixed(options.decimals);
@@ -45,7 +32,7 @@
     });
   };
 
-  var counterWayPoint = function () {
+  const counterWayPoint = () => {
     if ($("#colorlib-counter").length > 0) {
       $("#colorlib-counter").waypoint(
         function (direction) {
