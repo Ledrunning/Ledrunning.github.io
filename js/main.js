@@ -47,7 +47,7 @@
   };
 
   // Animations
-  var contentWayPoint = function () {
+  const contentWayPoint = function () {
     var i = 0;
     $(".animate-box").waypoint(
       function (direction) {
@@ -58,8 +58,7 @@
           setTimeout(function () {
             $("body .animate-box.item-animate").each(function (k) {
               var el = $(this);
-              setTimeout(
-                function () {
+              setTimeout(() => {
                   var effect = el.data("animate-effect");
                   if (effect === "fadeIn") {
                     el.addClass("fadeIn animated");
@@ -84,7 +83,7 @@
     );
   };
 
-  var burgerMenu = function () {
+  const burgerMenu = () => {
     $(".js-colorlib-nav-toggle").on("click", function (event) {
       event.preventDefault();
       var $this = $(this);
@@ -100,8 +99,8 @@
   };
 
   // Click outside of offcanvass
-  var mobileMenuOutsideClick = function () {
-    $(document).click(function (e) {
+  const mobileMenuOutsideClick = () => {
+    $(document).click((e) => {
       var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($("body").hasClass("offcanvas")) {
@@ -111,7 +110,7 @@
       }
     });
 
-    $(window).scroll(function () {
+    $(window).scroll(() => {
       if ($("body").hasClass("offcanvas")) {
         $("body").removeClass("offcanvas");
         $(".js-colorlib-nav-toggle").removeClass("active");
@@ -119,7 +118,7 @@
     });
   };
 
-  var clickMenu = function () {
+  const clickMenu = () => {
     $('#navbar a:not([class="external"])').click(function (event) {
       var section = $(this).data("nav-section"),
         navbar = $("#navbar");
@@ -145,7 +144,7 @@
   };
 
   // Reflect scrolling in navigation
-  var navActive = function (section) {
+  const navActive = (section) => {
     var $el = $("#navbar > ul");
     $el.find("li").removeClass("active");
     $el.each(function () {
@@ -156,9 +155,8 @@
     });
   };
 
-  var navigationSection = function () {
+  const navigationSection = () => {
     var $section = $("section[data-section]");
-
     $section.waypoint(
       function (direction) {
         if (direction === "down") {
@@ -184,7 +182,7 @@
     );
   };
 
-  var sliderMain = function () {
+  const sliderMain = () => {
     $("#colorlib-hero .flexslider").flexslider({
       animation: "fade",
       slideshowSpeed: 5000,
@@ -208,7 +206,7 @@
     });
   };
 
-  var stickyFunction = function () {
+  const stickyFunction = () => {
     var h = $(".image-content").outerHeight();
 
     if ($(window).width() <= 992) {
