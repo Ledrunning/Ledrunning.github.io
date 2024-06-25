@@ -242,8 +242,27 @@ export const projects = {
 
 export const experience = [
   {
+    title: "item – industrial applications",
+    duration: "May 2024 - Current",
+    subtitle: "Software Developer",
+    details: [
+      "Software development for Smart products;",
+    ],
+    tags: [
+      "Avalonia",
+      "Desktop development",
+      ".NET Core MVC",
+      ".NET6",
+      "NET8", 
+      "MSSQL",
+      "PostgreSQL",
+      "Razor",
+    ],
+    icon: "heartbeat",
+  },
+  {
     title: "Open Source Development",
-    duration: "Oct 2022 - Current",
+    duration: "Oct 2022 - May 2024",
     subtitle: "Software Developer",
     details: [
       "Contributing to open-source projects and maintaining my GitHub repositories;",
@@ -306,7 +325,7 @@ export const experience = [
       "SQLight",
       "Video/Audio Broadcasting",
     ],
-    icon: "heartbeat ",
+    icon: "heartbeat",
   },
   {
     title: "Viburn Ltd",
@@ -453,7 +472,7 @@ export const footer = [
     data: [
       "The core powered by Vinay Somawat.",
       "&copy; No Copyrights. Feel free to use this template.",
-      "The template was taken from Vinay Somawat <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>link text</a>",
+      "The template was taken from <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>Vinay Somawat</a>",
     ],
   },
 ];
