@@ -36,13 +36,11 @@ import { URLs } from './user-data/urls.js';
     }
   }
 
-
   async function fetchGitConnectedData(url) {
     try {
       const response = await fetch(url);
       console.log(response);
       const { basics } = await response.json();
-      // populateBlogs(items, "blogs");
       mapBasicResponse(basics);
     } catch (error) {
       throw new Error(
@@ -238,55 +236,64 @@ import { URLs } from './user-data/urls.js';
       a.target = "_blank";
       a.append(h4);
   
-      const img = document.createElement("img");
-      img.src = items[i].thumbnail;
-      img.className = "img-fluid";
-      img.alt = items[i].title;
+      // Use fetch to get the image and convert it to base64
+      fetch(items[i].thumbnail)
+        .then(response => response.blob())
+        .then(blob => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const img = document.createElement("img");
+            img.src = reader.result;
+            img.className = "img-fluid";
+            img.alt = items[i].title;
   
-      const divResumeContentLeft = document.createElement("div");
-      divResumeContentLeft.className = "resume-content";
-      divResumeContentLeft.id = "left-div";
-      divResumeContentLeft.append(img);
+            const divResumeContentLeft = document.createElement("div");
+            divResumeContentLeft.className = "resume-content";
+            divResumeContentLeft.id = "left-div";
+            divResumeContentLeft.append(img);
   
-      const divResumeContentRight = document.createElement("div");
-      divResumeContentRight.className = "resume-content";
-      divResumeContentRight.id = "right-div";
+            const divResumeContentRight = document.createElement("div");
+            divResumeContentRight.className = "resume-content";
+            divResumeContentRight.id = "right-div";
   
-      const p = document.createElement("p");
-      p.className = "project-description";
-      const html = items[i].content;
-      const [, doc] = /<p>(.*?)<\/p>/g.exec(html) || [];
-      p.innerHTML = doc;
+            const p = document.createElement("p");
+            p.className = "project-description";
+            const html = items[i].content;
+            const [, doc] = /<p>(.*?)<\/p>/g.exec(html) || [];
+            p.innerHTML = doc;
   
-      const divSpan = document.createElement("div");
-      for (const category of items[i].categories) {
-        const span = document.createElement("span");
-        span.className = "badge badge-secondary";
-        span.innerHTML = category;
-        divSpan.append(span);
-      }
+            const divSpan = document.createElement("div");
+            for (const category of items[i].categories) {
+              const span = document.createElement("span");
+              span.className = "badge badge-secondary";
+              span.innerHTML = category;
+              divSpan.append(span);
+            }
   
-      const divSubHeading = document.createElement("div");
-      divSubHeading.className = "sub-heading";
-      divSubHeading.append(p, divSpan);
-      divResumeContentRight.append(divSubHeading);
+            const divSubHeading = document.createElement("div");
+            divSubHeading.className = "sub-heading";
+            divSubHeading.append(p, divSpan);
+            divResumeContentRight.append(divSubHeading);
   
-      const divResumeItem = document.createElement("div");
-      divResumeItem.className = "resume-item";
-      divResumeItem.append(divResumeContentLeft, divResumeContentRight);
-      a.append(divResumeItem);
+            const divResumeItem = document.createElement("div");
+            divResumeItem.className = "resume-item";
+            divResumeItem.append(divResumeContentLeft, divResumeContentRight);
+            a.append(divResumeItem);
   
-      const divProjectCard = document.createElement("div");
-      divProjectCard.className = "project-card";
-      divProjectCard.append(a);
+            const divProjectCard = document.createElement("div");
+            divProjectCard.className = "project-card";
+            divProjectCard.append(a);
   
-      const li = document.createElement("li");
-      li.append(divProjectCard);
-      projectdesign.append(li);
+            const li = document.createElement("li");
+            li.append(divProjectCard);
+            projectdesign.append(li);
   
-      if (i !== count - 1) {
-        projectdesign.append(document.createElement("hr"));
-      }
+            if (i !== count - 1) {
+              projectdesign.append(document.createElement("hr"));
+            }
+          };
+          reader.readAsDataURL(blob);
+        });
     }
   }
   
