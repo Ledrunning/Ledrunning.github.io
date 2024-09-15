@@ -10,30 +10,7 @@ import {
 import { URLs } from "./user-data/urls.js";
 
 const { webProjects, softwareProjects, embeddedProjects } = projects;
-const { medium, gitConnected } = URLs;
-
-/**
- * Fetches blogs from Medium profile.
- *
- * @function
- * @async
- *
- * @throws {Error} If there is any error in fetching the blogs from Medium profile.
- *
- * @returns {void}
- */
-
-async function fetchBlogsFromMedium(url) {
-  try {
-    const response = await fetch(url);
-    const { items } = await response.json();
-    populateBlogs(items, "blogs");
-  } catch (error) {
-    throw new Error(
-      `Error in fetching the blogs from Medium profile: ${error}`
-    );
-  }
-}
+const { gitConnected } = URLs;
 
 async function fetchGitConnectedData(url) {
   try {
@@ -456,7 +433,6 @@ populateBio(bio, "bio");
 
 populateSkills(skills, "skills");
 
-fetchBlogsFromMedium(medium);
 fetchGitConnectedData(gitConnected);
 
 populateProjects(webProjects, "web-projects");
