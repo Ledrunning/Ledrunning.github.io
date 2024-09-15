@@ -3,8 +3,8 @@ export const bio = [
     fintech, aviation, and industrial engineering. I have expertise in web development, desktop applications, and embedded systems, 
     using C#, .NET frameworks, and other technologies. My background in electronics engineering enables 
     me to combine interdisciplinary knowledge and apply it to complex and innovative projects. 
-    I am passionate about learning new skills and exploring new challenges. Currently, I am studying German language and contributing to open source development. 
-    I am also interested in artificial intelligence, computer vision, cloud computing, and electronics.`,
+    I am passionate about learning new skills and exploring new challenges. 
+    Also I contribute to open source development and I interested in artificial intelligence, computer vision, cloud computing, and electronics.`,
 ];
 
 export const skills = [
@@ -84,8 +84,8 @@ export const skills = [
 
 export const education = [
   {
-    title: "Participants of German language courses",
-    duration: "2023 - Current",
+    title: "German language courses",
+    duration: "2023 - 2024",
     subtitle: "Milling Sprachenschulen - Milling GmbH",
     details: [],
     tags: [
@@ -246,14 +246,15 @@ export const experience = [
     duration: "May 2024 - Current",
     subtitle: "Software Developer",
     details: [
-      "Software development for Smart products;",
+      "Software development for smart products",
+      "Development of middleware for hardware",
     ],
     tags: [
       "Avalonia",
       "Desktop development",
       ".NET Core MVC",
       ".NET6",
-      "NET8", 
+      ".NET8", 
       "MSSQL",
       "PostgreSQL",
       "Razor",
