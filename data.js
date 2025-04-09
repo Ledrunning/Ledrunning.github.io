@@ -84,8 +84,8 @@ export const skills = [
 
 export const education = [
   {
-    title: "Participants of German language courses",
-    duration: "2023 - Current",
+    title: "German language courses",
+    duration: "2023 - 2024",
     subtitle: "Milling Sprachenschulen - Milling GmbH",
     details: [],
     tags: [
@@ -246,7 +246,8 @@ export const experience = [
     duration: "May 2024 - Current",
     subtitle: "Software Developer",
     details: [
-      "Software development for Smart products;",
+      "Software development for smart products",
+      "Development of middleware for hardware",
       "Development of middleware for hardware;",
       "Low-level programming and IoT;",
     ],
