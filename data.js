@@ -88,11 +88,7 @@ export const education = [
     duration: "2023 - 2024",
     subtitle: "Milling Sprachenschulen - Milling GmbH",
     details: [],
-    tags: [
-      "Sprachschule",
-      "Deutsch",
-      "Deutsche Sprache",
-    ],
+    tags: ["Sprachschule", "Deutsch", "Deutsche Sprache"],
     icon: "book",
   },
   {
@@ -131,21 +127,41 @@ export const projects = {
     {
       projectName: "Bitcoin Query",
       image: "images/bitcoinQuery.png",
-      summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar.",
+      summary:
+        "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar.",
       preview: "https://github.com/Ledrunning/BitcoinQuery",
-      techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
+      techStack: [
+        "C#",
+        "WPF",
+        "SignalR",
+        "Autofac",
+        "NLog",
+        ".NET 8",
+        "REST API",
+        "Hangfire",
+        "Unit Tests",
+      ],
     },
     {
       projectName: "Image-Uploader",
       image: "images/imageUploader.png",
-      summary: "The application allows users to upload images to the server and view them on a desktop application.",
+      summary:
+        "The application allows users to upload images to the server and view them on a desktop application.",
       preview: "https://github.com/Ledrunning/Image-Uploader",
-      techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
+      techStack: [
+        "Vue.js",
+        "C#",
+        "WPF",
+        "ASP .NET Core 2.0",
+        "REST API",
+        "MSSQL",
+      ],
     },
     {
       projectName: "githubvue",
       image: "images/githubVue.png",
-      summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
+      summary:
+        "Web client displays information about GitHub repositories, including repository details and recent commits.",
       preview: "https://github.com/Ledrunning/githubvue",
       techStack: ["Vue.js", "HTML", "CSS", "REST API"],
     },
@@ -154,40 +170,59 @@ export const projects = {
     {
       projectName: "Employees Accounting",
       image: "images/empAccounting.png",
-      summary: "Client-server application designed for employee accounting utilizing face detection technology.",
+      summary:
+        "Client-server application designed for employee accounting utilizing face detection technology.",
       preview: "https://github.com/Ledrunning/EmployeesAccounting",
       techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
     },
     {
       projectName: "Airplane Simulation Trajectory",
       image: "images/aircraftTrajectory.png",
-      summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
-                "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
-                "providing an immersive experience of tracking the path of an airplane.",
+      summary:
+        "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" +
+        "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," +
+        "providing an immersive experience of tracking the path of an airplane.",
       preview: "https://github.com/Ledrunning/AirplaneSimulationTrajectory",
-      techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
+      techStack: [
+        "C#",
+        "WPF",
+        ".NET Framework 4.8 ",
+        "MVVM",
+        "SimpleInjector",
+        "Helix3D",
+      ],
     },
     {
       projectName: "VideoBroadcast",
       image: "images/videoBroadcast.png",
-      summary: "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." + 
-               "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
+      summary:
+        "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." +
+        "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
       preview: "https://github.com/Ledrunning/VideoBroadcast",
-      techStack: ["C#", "Windows Forms", ".NET Framework 4.6", "VLC", "RTP/RTSP", "HTTP"],
+      techStack: [
+        "C#",
+        "Windows Forms",
+        ".NET Framework 4.6",
+        "VLC",
+        "RTP/RTSP",
+        "HTTP",
+      ],
     },
     {
       projectName: "FacialDetection",
       image: "images/faceDetection.jpg",
-      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu.", 
+      summary:
+        "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu.",
       preview: "https://github.com/Ledrunning/FacialDetection",
       techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
     },
     {
       projectName: "WiFiOutdoorSensor",
       image: "images/wifiOutdoorSens.png",
-      summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
-               "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
-               "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
+      summary:
+        "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," +
+        "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," +
+        "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.",
       preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
       techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
     },
@@ -201,7 +236,8 @@ export const projects = {
     {
       projectName: "uMap",
       image: "images/uMap.png",
-      summary: "Simple WPF MVVM application to display a world map using Open Street Map provider.",
+      summary:
+        "Simple WPF MVVM application to display a world map using Open Street Map provider.",
       preview: "https://github.com/Ledrunning/uMap",
       techStack: ["WPF", "MVVM", "Desktop", "C#", "OpenStreetMap"],
     },
@@ -217,9 +253,10 @@ export const projects = {
     {
       projectName: "tiny_thermometer",
       image: "images/thermometer.png",
-      summary: "A simple temperature and humidity meter displaying values on an 8x2 LCD using" + 
-      "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
-      "The firmware is written in C language in Atmel Studio 7",
+      summary:
+        "A simple temperature and humidity meter displaying values on an 8x2 LCD using" +
+        "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
+        "The firmware is written in C language in Atmel Studio 7",
       preview: "https://github.com/Ledrunning/tiny_thermometer",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
@@ -233,7 +270,8 @@ export const projects = {
     {
       projectName: "LightController",
       image: "images/lightController.png",
-      summary: "Open source project to control light in the room, garage, street, house etc",
+      summary:
+        "Open source project to control light in the room, garage, street, house etc",
       preview: "https://github.com/Ledrunning/LightController",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
@@ -242,19 +280,20 @@ export const projects = {
 
 export const experience = [
   {
-    title: "item – industrial applications",
+    title: "item Industrietechnik GmbH",
     duration: "May 2024 - Current",
     subtitle: "Software Developer",
     details: [
       "Software development for smart products",
       "Development of middleware for hardware",
+      "Low-level programming and IoT",
     ],
     tags: [
       "Avalonia",
       "Desktop development",
       ".NET Core MVC",
       ".NET6",
-      ".NET8", 
+      ".NET8",
       "MSSQL",
       "PostgreSQL",
       "Razor",
@@ -412,10 +451,10 @@ export const contact = [
     label:
       "Please feel welcome to contact me via email. Whether you would like to discuss a technology or a business opportunity, I would be delighted to hear from you.",
     data: [
-        {
-            text:"",
-            link:""
-        },
+      {
+        text: "",
+        link: "",
+      },
     ],
   },
 ];
