@@ -1,10 +1,10 @@
 export const bio = [
-  `With over 10 years of expertise, I have developed a range of software solutions for various domains, such as healthcare, 
-    fintech, aviation, and industrial engineering. I have expertise in web development, desktop applications, and embedded systems, 
-    using C#, .NET frameworks, and other technologies. My background in electronics engineering enables 
-    me to combine interdisciplinary knowledge and apply it to complex and innovative projects. 
-    I am passionate about learning new skills and exploring new challenges. 
-    Also I contribute to open source development and I interested in artificial intelligence, computer vision, cloud computing, and electronics.`,
+  `With over 10 years of experience, I have developed a wide range of software solutions across 
+  domains such as warehousing, healthcare, fintech, aviation, and industrial engineering. 
+  I specialize in web development, desktop applications, and embedded systems, primarily using C#, 
+  .NET frameworks, and related technologies. My background in electronics engineering allows me 
+  to combine interdisciplinary knowledge and apply it to complex, innovative projects. 
+  I am passionate about learning new skills and continuously expanding my technical horizons.`,
 ];
 
 export const skills = [
@@ -297,6 +297,9 @@ export const experience = [
       "MSSQL",
       "PostgreSQL",
       "Razor",
+      "ESP-IDF",
+      "Embedded C",
+      "IoT",
     ],
     icon: "heartbeat",
   },
