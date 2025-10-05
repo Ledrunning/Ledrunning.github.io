@@ -287,6 +287,8 @@ export const experience = [
       "Software development for smart products",
       "Development of middleware for hardware",
       "Low-level programming and IoT",
+      "Industrial and custom protocols",
+      "Frontend for smart devices",
     ],
     tags: [
       "Avalonia",
@@ -300,6 +302,9 @@ export const experience = [
       "ESP-IDF",
       "Embedded C",
       "IoT",
+      "JavaScript",
+      "JQuery",
+      "Foundation",
     ],
     icon: "heartbeat",
   },
