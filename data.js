@@ -284,11 +284,11 @@ export const experience = [
     duration: "May 2024 - Current",
     subtitle: "Software Developer",
     details: [
-      "Software development for smart products",
-      "Development of middleware for hardware",
-      "Low-level programming and IoT",
-      "Industrial and custom protocols",
-      "Frontend for smart devices",
+      "Software development for smart products;",
+      "Development of middleware for hardware;",
+      "Low-level programming and IoT;",
+      "Industrial and custom protocols;",
+      "Frontend / UI for smart devices;",
     ],
     tags: [
       "Avalonia",
@@ -351,7 +351,7 @@ export const experience = [
     duration: "Jul 2018 - Jul 2022",
     subtitle: "Software Engineer",
     details: [
-      "Wrote corporate WPF and Windows Forms applications in C#;",
+      "Developed the financial product for a UK fintech company as a back-end developer;",
       "Designed a smart storage system for wire reels;",
       "Created the system for determining the slip coefficient on the runway;",
       "Developed a multimedia entertainment system for passenger aircraft.",
@@ -380,7 +380,7 @@ export const experience = [
     duration: "Sep 2017 - Jul 2018",
     subtitle: ".NET Developer",
     details: [
-      "Developed the financial product for a UK fintech company as a back-end developer;",
+      "Wrote corporate WPF and Windows Forms applications in C#;",
       "Worked with Open CV and EMGU CV for facial detection and recognition;",
       "Created a desktop application to keep track of serial numbers;",
     ],
