@@ -4,7 +4,7 @@ Welcome to my Just Portfolio repository! Here, I showcase my skills, experience,
 
 ## Overview
 
-This repository serves as a platform where I present my skills in JavaScript and web development. It contains a collection of projects and works that highlight my abilities and experience.
+This repository serves as a platform to showcase my skills in JavaScript and web development. It contains a collection of projects and works that highlight my abilities and experience.
 
 ## Inspiration
 
@@ -13,7 +13,7 @@ The inspiration for this portfolio came from a wonderful project created by [vin
 
 ## Getting Started
 
-To explore my portfolio, simply visit [Just Portfolio](https://osmanmazinov.github.io/) and navigate through the sections and projects.
+To explore my portfolio, just visit [Just Portfolio]([https://osmanmazinov.github.io/](https://ledrunning.github.io/)) and navigate through the sections and projects.
 
 ## Feedback
 
