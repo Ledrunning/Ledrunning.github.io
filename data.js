@@ -10,7 +10,7 @@ export const bio = [
 export const skills = [
   {
     title: "Languages",
-    skillName: "C, C#, TypeScript",
+    skillName: "C, C#, JavaScript, TypeScript",
     color: "1",
     percentage: "90",
   },
@@ -22,7 +22,7 @@ export const skills = [
   },
   {
     title: "Design",
-    skillName: "HTML, XAML, GTK, Bootstrap",
+    skillName: "HTML, XAML, GTK, Bootstrap, Foundation",
     color: "4",
     percentage: "60",
   },
@@ -70,13 +70,13 @@ export const skills = [
   },
   {
     title: "IDE",
-    skillName: "VS Code, Visual Studio, ReSharper",
+    skillName: "VS Code, Visual Studio, Rider, ReSharper",
     color: "6",
     percentage: "100",
   },
   {
     title: "Protocols",
-    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN",
+    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN, IO-Link",
     color: "1",
     percentage: "80",
   },
@@ -282,13 +282,13 @@ export const experience = [
   {
     title: "item Industrietechnik GmbH",
     duration: "May 2024 - Current",
-    subtitle: "Software Developer",
+    subtitle: "Software Engineer",
     details: [
-      "Software development for smart products;",
-      "Development of middleware for hardware;",
-      "Low-level programming and IoT;",
-      "Industrial and custom protocols;",
-      "Frontend / UI for smart devices;",
+      "IoT & Smart Product Development: Full-cycle software engineering for connected devices;",
+      "Middleware & Device Communication: Building high-level APIs (.NET) to interface with hardware and sensors;",
+      "Industrial Connectivity: Implementing protocols (MQTT, Modbus, TCP/UDP) for reliable device-to-server communication;",
+      " IoT Edge Integration: Low-level programming concepts applied to system integration;",
+      "Web-based HMI & Dashboards: Developing complex browser-based frontends for device control and monitoring;",
     ],
     tags: [
       "Avalonia",
@@ -296,6 +296,7 @@ export const experience = [
       ".NET Core MVC",
       ".NET6",
       ".NET8",
+      ".NET9",
       "MSSQL",
       "PostgreSQL",
       "Razor",
@@ -330,10 +331,10 @@ export const experience = [
   {
     title: "Arsis",
     duration: "Jul 2022 - Oct 2022",
-    subtitle: ".NET Developer",
+    subtitle: "Senior .NET Developer",
     details: [
-      "Developed portals for medicines accounting for leading international healthcare companies as a full-stack developer;",
-      "Developed server tools for a healthcare company;",
+      "Full-Stack Development (Healthcare): Engineered web portals for pharmaceutical inventory management for leading international companies;",
+      "Backend Tooling: Designed and implemented server-side utilities to automate data processing workflows;",
     ],
     tags: [
       "TypeScript",
@@ -343,20 +344,21 @@ export const experience = [
       ".NET6",
       "MSSQL",
       "Razor",
+      "Azure Cosmos DB",
+      "Entity Framework",
+      "Software Design Patterns",
     ],
     icon: "truck ",
   },
   {
     title: "U - Tek",
     duration: "Jul 2018 - Jul 2022",
-    subtitle: "Software Engineer",
+    subtitle: "C# Developer",
     details: [
-      "Developed the financial product for a UK fintech company as a back-end developer;",
-      "Designed a smart storage system for wire reels;",
-      "Created the system for determining the slip coefficient on the runway;",
-      "Developed a multimedia entertainment system for passenger aircraft.",
-      "Wrote low-level and middleware API for cabin light control system.",
-      "Created file synchronization system from server to passengers seat media system via Syncthing using Syncthing API;",
+      "Fintech Backend: Developed secure core services for a UK-based financial product;",
+      "In-Flight Entertainment System: Developed the backend and middleware for a passenger multimedia system. Implemented Hardware Control APIs to manage cabin lighting and built a content synchronization service using Syncthing API;",
+      "Aviation Safety: Designed a solution for determining the runway slip coefficient, implementing complex calculation logic for airport safety;",
+      "Smart Storage System: Designed the control software for automated wire reel storage, optimizing inventory placement and retrieval algorithms;",
     ],
     tags: [
       "GStreamer",
@@ -372,6 +374,7 @@ export const experience = [
       "MSSQL",
       "SQLight",
       "Video/Audio Broadcasting",
+      "Nservicebus",
     ],
     icon: "heartbeat",
   },
@@ -380,9 +383,7 @@ export const experience = [
     duration: "Sep 2017 - Jul 2018",
     subtitle: ".NET Developer",
     details: [
-      "Wrote corporate WPF and Windows Forms applications in C#;",
-      "Worked with Open CV and EMGU CV for facial detection and recognition;",
-      "Created a desktop application to keep track of serial numbers;",
+      "Computer Vision and Advanced Algorithms: Enterprise applications (WPF and Windows Forms in C#) integrating OpenCV and EMGU CV for face detection and recognition have been developed;",
     ],
     tags: [
       "WPF",
@@ -399,9 +400,9 @@ export const experience = [
     duration: "Jul 2014 - Jul 2018",
     subtitle: "Electronic Engineer",
     details: [
-      "Development of embedded devices, and firmware for AVR and STM32 microcontrollers;",
-      "Raspberry Pi, PLC, and industrial controllers programming;",
-      "Wrote desktop application for frequency converter PID tracing and chart drawing via Modbus RTU;",
+      "Embedded Systems & Firmware: Developed firmware and hardware solutions using AVR and STM32 microcontrollers;",
+      "Industrial Automation: Programmed PLCs and industrial controllers, including integration with Raspberry Pi based systems;",
+      "Diagnostic Software Tools: Developed a desktop application for frequency converter analysis (PID tracing and real-time charting) via Modbus RTU;",
     ],
     tags: [
       "WPF",
@@ -419,8 +420,8 @@ export const experience = [
     duration: "Sep 2011 - Jul 2014",
     subtitle: "Electronic Engineer",
     details: [
-      "Modeled and developed electronic devices and ship automation modules;",
-      "Created software for PLC;",
+      "Electronic Design & Development: Modelled and developed custom electronic devices and hardware components for industrial applications;",
+      "Ship Automation Systems: Engineered automation modules and programmed PLC logic for critical ship systems;",
     ],
     tags: [
       "Hardware Development",
@@ -482,6 +483,10 @@ export const footer = [
       {
         text: "Reddit",
         link: "https://www.reddit.com/user/Ledrunnin/",
+      },
+      {
+        text: "Hackaday",
+        link: "https://hackaday.io/Jdo",
       },
     ],
   },
