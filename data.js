@@ -1,10 +1,7 @@
 export const bio = [
-  `With over 10 years of experience, I have developed a wide range of software solutions across 
-  domains such as warehousing, healthcare, fintech, aviation, and industrial engineering. 
-  I specialize in web development, desktop applications, and embedded systems, primarily using C#, 
-  .NET frameworks, and related technologies. My background in electronics engineering allows me 
-  to combine interdisciplinary knowledge and apply it to complex, innovative projects. 
-  I am passionate about learning new skills and continuously expanding my technical horizons.`,
+  `Senior Backend Engineer with 10+ years of experience designing and building distributed systems in C# and .NET across fintech, aviation, and industrial domains. 
+   Specialized in backend architecture, system reliability, and integration of complex systems, including hardware and industrial protocols. 
+   Experienced in building production-grade services with secure communication, high availability, and cloud-based architectures.`,
 ];
 
 export const skills = [
@@ -64,7 +61,7 @@ export const skills = [
   },
   {
     title: "Tools",
-    skillName: "Postman, NServiceBus Analyzer, Chrome DevTools",
+    skillName: "Postman, NServiceBus Analyzer, Chrome DevTools, Grafana",
     color: "3",
     percentage: "80",
   },
@@ -92,7 +89,7 @@ export const education = [
     icon: "book",
   },
   {
-    title: "Biomedical electronics - Master Degree",
+    title: "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelor’s and Master’s level",
     duration: "2008 - 2009",
     subtitle: "Sevastopol State Technical University",
     details: [],
@@ -179,9 +176,8 @@ export const projects = {
       projectName: "Airplane Simulation Trajectory",
       image: "images/aircraftTrajectory.png",
       summary:
-        "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" +
-        "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," +
-        "providing an immersive experience of tracking the path of an airplane.",
+        "Airplane Simulation Trajectory is a WPF 3D application that demonstrates " +
+        "the simulation of an airplane's trajectory over the ground.",
       preview: "https://github.com/Ledrunning/AirplaneSimulationTrajectory",
       techStack: [
         "C#",
@@ -196,8 +192,8 @@ export const projects = {
       projectName: "VideoBroadcast",
       image: "images/videoBroadcast.png",
       summary:
-        "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." +
-        "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
+        "VideoBroadcast is a Client-Server application written in C# " +
+        "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP.",
       preview: "https://github.com/Ledrunning/VideoBroadcast",
       techStack: [
         "C#",
@@ -217,16 +213,6 @@ export const projects = {
       techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
     },
     {
-      projectName: "WiFiOutdoorSensor",
-      image: "images/wifiOutdoorSens.png",
-      summary:
-        "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," +
-        "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," +
-        "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.",
-      preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
-      techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
-    },
-    {
       projectName: "TinnyMonitor",
       image: "images/tinnyMonitor.png",
       summary: "Desktop application for the hardware weather station.",
@@ -244,6 +230,13 @@ export const projects = {
   ],
   embeddedProjects: [
     {
+      projectName: "WiFiOutdoorSensor",
+      image: "images/wifiOutdoorSens.png",
+      summary: "Wireless outdoor temperature and humidity monitoring system.",
+      preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
+      techStack: ["C++", "C#", "JavaScript", "Hardware", "Android/Java", "Web"],
+    },
+    {
       projectName: "animationClock",
       image: "images/clock.png",
       summary: "Animation clock on STM32 + ILI9341",
@@ -254,9 +247,7 @@ export const projects = {
       projectName: "tiny_thermometer",
       image: "images/thermometer.png",
       summary:
-        "A simple temperature and humidity meter displaying values on an 8x2 LCD using" +
-        "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
-        "The firmware is written in C language in Atmel Studio 7",
+        "A simple temperature and humidity meter displaying values on an 8x2 LCD using",
       preview: "https://github.com/Ledrunning/tiny_thermometer",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
@@ -284,11 +275,11 @@ export const experience = [
     duration: "May 2024 - Current",
     subtitle: "Software Engineer",
     details: [
-      "IoT & Smart Product Development: Full-cycle software engineering for connected devices;",
-      "Middleware & Device Communication: Building high-level APIs (.NET) to interface with hardware and sensors;",
-      "Industrial Connectivity: Implementing protocols (MQTT, Modbus, TCP/UDP) for reliable device-to-server communication;",
-      " IoT Edge Integration: Low-level programming concepts applied to system integration;",
-      "Web-based HMI & Dashboards: Developing complex browser-based frontends for device control and monitoring;",
+      "Designed layered software architectures for industrial automation systems with a focus on reliability and long-term maintainability",
+      "Developed middleware APIs and backend services in .NET/C# for integration with industrial hardware and communication protocols (MQTT, Modbus, TCP/UDP)",
+      "Designed and implemented secure device communication using mTLS and authentication mechanisms for Edge environments",
+      "Collaborated with R&D teams to integrate industrial systems with remote monitoring and data collection solutions",
+      "Collaborated to system architecture decisions, integration strategies, and backend service design",
     ],
     tags: [
       "Avalonia",
@@ -333,8 +324,9 @@ export const experience = [
     duration: "Jul 2022 - Oct 2022",
     subtitle: "Senior .NET Developer",
     details: [
-      "Full-Stack Development (Healthcare): Engineered web portals for pharmaceutical inventory management for leading international companies;",
-      "Backend Tooling: Designed and implemented server-side utilities to automate data processing workflows;",
+      "Contributed to the design and development of secure enterprise web applications for Fortune 500 pharmaceutical clients",
+      "Designed and implemented automated inventory management systems for sensitive medical supply data across international markets",
+      "Ensured data integrity, GDPR compliance, and secure access control through RBAC and API security best practices",
     ],
     tags: [
       "TypeScript",
@@ -355,10 +347,10 @@ export const experience = [
     duration: "Jul 2018 - Jul 2022",
     subtitle: "C# Developer",
     details: [
-      "Fintech Backend: Developed secure core services for a UK-based financial product;",
-      "In-Flight Entertainment System: Developed the backend and middleware for a passenger multimedia system. Implemented Hardware Control APIs to manage cabin lighting and built a content synchronization service using Syncthing API;",
-      "Aviation Safety: Designed a solution for determining the runway slip coefficient, implementing complex calculation logic for airport safety;",
-      "Smart Storage System: Designed the control software for automated wire reel storage, optimizing inventory placement and retrieval algorithms;",
+      "Architected and developed mission-critical fintech microservices for a UK-based platform, focusing on high-throughput processing, fraud detection, and scalable API design",
+      "Built backend and middleware components for an aircraft passenger multimedia system, including hardware integration APIs and real-time content synchronization",
+      "Developed safety-critical computation services for aviation systems (runway safety), achieving high reliability through extensive unit and integration testing",
+      "Designed and implemented control software for automated industrial storage systems, optimizing inventory placement and retrieval logic in constrained environments",
     ],
     tags: [
       "GStreamer",
@@ -383,7 +375,7 @@ export const experience = [
     duration: "Sep 2017 - Jul 2018",
     subtitle: ".NET Developer",
     details: [
-      "Computer Vision and Advanced Algorithms: Enterprise applications (WPF and Windows Forms in C#) integrating OpenCV and EMGU CV for face detection and recognition have been developed;",
+      " Developed enterprise applications (WPF, WinForms) integrating OpenCV and EmguCV for face detection and recognition",
     ],
     tags: [
       "WPF",
@@ -400,9 +392,10 @@ export const experience = [
     duration: "Jul 2014 - Jul 2018",
     subtitle: "Electronic Engineer",
     details: [
-      "Embedded Systems & Firmware: Developed firmware and hardware solutions using AVR and STM32 microcontrollers;",
-      "Industrial Automation: Programmed PLCs and industrial controllers, including integration with Raspberry Pi based systems;",
-      "Diagnostic Software Tools: Developed a desktop application for frequency converter analysis (PID tracing and real-time charting) via Modbus RTU;",
+      "Designed Hardware",
+      "Developed firmware for AVR and STM32 microcontrollers",
+      "Programmed PLCs and industrial controllers, including Raspberry Pi integration",
+      "Built a desktop diagnostic tool for frequency converter analysis (PID tracing, real-time charting) via Modbus RTU",
     ],
     tags: [
       "WPF",
@@ -420,8 +413,8 @@ export const experience = [
     duration: "Sep 2011 - Jul 2014",
     subtitle: "Electronic Engineer",
     details: [
-      "Electronic Design & Development: Modelled and developed custom electronic devices and hardware components for industrial applications;",
-      "Ship Automation Systems: Engineered automation modules and programmed PLC logic for critical ship systems;",
+      "Managed the full development cycle of electronic devices, including schematic design and PCB layout",
+      "Developed firmware in Embedded C for Atmel AVR microcontrollers",
     ],
     tags: [
       "Hardware Development",
@@ -439,8 +432,8 @@ export const experience = [
     duration: "Sep 2011 - Jul 2014",
     subtitle: "Electronic Engineer",
     details: [
-      "Modeled and developed electronic devices and ship automation modules;",
-      "Created software for PLC;",
+      "Designed and developed custom electronic devices and hardware components for industrial applications",
+      "Engineered automation modules and programmed PLC logic for critical ship systems",
     ],
     tags: [
       "Hardware Development",
@@ -455,77 +448,18 @@ export const experience = [
   },
 ];
 
-export const contact = [
-  {
-    label:
-      "Please feel welcome to contact me via email. Whether you would like to discuss a technology or a business opportunity, I would be delighted to hear from you.",
-    data: [
-      {
-        text: "",
-        link: "",
-      },
-    ],
-  },
-];
-
 export const footer = [
-  {
-    label: "Dev Profiles",
-    data: [
-      {
-        text: "Stackoverflow",
-        link: "https://stackoverflow.com/users/8070900/jdo",
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/Ledrunning",
-      },
-      {
-        text: "Reddit",
-        link: "https://www.reddit.com/user/Ledrunnin/",
-      },
-      {
-        text: "Hackaday",
-        link: "https://hackaday.io/Jdo",
-      },
-    ],
-  },
-  {
-    label: "Resources",
-    data: [
-      {
-        text: "Enable Dark/Light Mode",
-        func: "enableDarkMode()",
-      },
-      {
-        text: "Print this page",
-        func: "window.print()",
-      },
-      {
-        text: "Clone this page",
-        link: "https://github.com/Ledrunning/Ledrunning.github.io",
-      },
-    ],
-  },
   {
     label: "Social Profiles",
     data: [
       {
         text: "Linkedin",
-        link: "https://www.linkedin.com/in/osman-mazinov-lennarovich/",
+        link: "https://www.linkedin.com/in/osman-mazinov/",
       },
       {
         text: "Xing",
         link: "https://www.xing.com/profile/Osman_Mazinov/",
       },
-    ],
-  },
-  {
-    label: "copyright-text",
-    data: [
-      "The core powered by Vinay Somawat.",
-      "&copy; No Copyrights. Feel free to use this template.",
-      "The template was taken from <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>Vinay Somawat</a>",
     ],
   },
 ];
