@@ -1,353 +1,170 @@
 import {
   bio,
   skills,
-  projects,
   education,
+  projects,
   experience,
   footer,
 } from "./data.js";
 
-import { URLs } from "./user-data/urls.js";
+const $ = (s) => document.querySelector(s);
+const esc = (s) =>
+  String(s).replace(
+    /[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+  );
+const tags = (arr) =>
+  `<ul class="tags">${arr.map((t) => `<li>${esc(t.trim())}</li>`).join("")}</ul>`;
+const clean = (s) => s.replace(/\s+/g, " ").trim();
 
-const { webProjects, softwareProjects, embeddedProjects } = projects;
-const { gitConnected } = URLs;
+// Hero + About
+const bioText = clean(bio.join(" "));
+$("#lead").textContent = bioText.split(". ").slice(0, 1).join(". ") + ".";
+$("#bio").innerHTML = bio.map((p) => `<p>${esc(clean(p))}</p>`).join("");
 
-async function fetchGitConnectedData(url) {
+// Projects: filter chips + cards
+const groups = [
+  ["All", null],
+  ["Embedded", projects.embeddedProjects],
+  ["Desktop / Software", projects.softwareProjects],
+  ["Web", projects.webProjects],
+];
+const all = groups.slice(1).flatMap(([, list]) => list);
+groups[0][1] = all;
+
+const renderProjects = (list) => {
+  $("#project-grid").innerHTML = list
+    .map(
+      (p) => `
+    <article class="card">
+      <img src="${esc(p.image)}" alt="${esc(p.projectName)} screenshot" loading="lazy" />
+      <div class="card-b">
+        <h3>${esc(p.projectName)}</h3>
+        <p>${esc(clean(p.summary))}</p>
+        ${tags(p.techStack.slice(0, 6))}
+        <a class="more" href="${esc(p.preview)}" target="_blank" rel="noopener">View on GitHub ></a>
+      </div>
+    </article>`,
+    )
+    .join("");
+};
+
+$("#filters").innerHTML = groups
+  .map(
+    ([name], i) =>
+      `<button class="chip-btn" data-i="${i}" aria-pressed="${i === 0}">${name}</button>`,
+  )
+  .join("");
+$("#filters").addEventListener("click", (e) => {
+  const b = e.target.closest("button");
+  if (!b) return;
+  document
+    .querySelectorAll("#filters button")
+    .forEach((x) => x.setAttribute("aria-pressed", x === b));
+  renderProjects(groups[b.dataset.i][1]);
+});
+renderProjects(all);
+
+// Skills: grouped tags, duplicates removed across groups
+const seen = new Set();
+$("#skill-list").innerHTML = skills
+  .map((s) => {
+    const items = s.skillName
+      .split(",")
+      .map((x) => x.trim())
+      .filter((x) => {
+        const k = x.toLowerCase();
+        return x && !seen.has(k) && seen.add(k);
+      });
+    return items.length
+      ? `<div><h3>${esc(s.title.replace(/:$/, ""))}</h3>${tags(items)}</div>`
+      : "";
+  })
+  .join("");
+
+// Timelines
+const timeline = (list, withDetails) =>
+  list
+    .map(
+      (x) => `
+  <li>
+    <h3>${esc(x.title)}</h3>
+    <div class="role">${esc(x.subtitle)}</div>
+    <p class="when">${esc(x.duration)}</p>
+    ${
+      withDetails && x.details.length
+        ? `<ul class="d">${x.details
+            .map((d) => {
+              const [head, ...rest] = clean(d).split(": ");
+              return `<li>${rest.length ? `<b>${esc(head)}:</b> ${esc(rest.join(": "))}` : esc(head)}</li>`;
+            })
+            .join("")}</ul>`
+        : ""
+    }
+    ${x.tags.length ? tags(x.tags) : ""}
+  </li>`,
+    )
+    .join("");
+$("#exp").innerHTML = timeline(experience, true);
+$("#edu").innerHTML = timeline(education, false);
+
+// Footer links
+const links = footer
+  .filter((g) => g.label !== "copyright-text")
+  .flatMap((g) => g.data)
+  .filter((d) => d.link)
+  .map(
+    (d) =>
+      `<a href="${esc(d.link)}" target="_blank" rel="noopener">${esc(d.text)}</a>`,
+  );
+$("#footer").innerHTML =
+  `<span>© ${new Date().getFullYear()} Osman Mazinov</span>${links.join("")}`;
+
+// Theme toggle (dark by default, choice is remembered)
+const themeBtn = $("#theme");
+const applyTheme = (t) => {
+  document.documentElement.dataset.theme = t;
+  const toLight = t === "dark";
+  themeBtn.innerHTML = `<span aria-hidden="true">${toLight ? "?" : "?"}</span><span class="lbl">${toLight ? "Light" : "Dark"}</span>`;
+  themeBtn.setAttribute(
+    "aria-label",
+    toLight ? "Switch to light theme" : "Switch to dark theme",
+  );
   try {
-    const response = await fetch(url);
-    console.log(response);
-    const { basics } = await response.json();
-    mapBasicResponse(basics);
-  } catch (error) {
-    throw new Error(`Error in fetching the blogs from git connected: ${error}`);
-  }
-}
+    localStorage.setItem("theme", t);
+  } catch (e) {}
+};
+applyTheme(
+  document.documentElement.dataset.theme === "light" ? "light" : "dark",
+);
+themeBtn.addEventListener("click", () =>
+  applyTheme(
+    document.documentElement.dataset.theme === "dark" ? "light" : "dark",
+  ),
+);
 
-function mapBasicResponse(basics) {
-  const {
-    name,
-    label,
-    image,
-    email,
-    phone,
-    url,
-    summary,
-    profiles,
-    headline,
-    blog,
-    yearsOfExperience,
-    username,
-    locationAsString,
-    region,
-    karma,
-    id,
-    followers,
-    following,
-    picture,
-    website,
-  } = basics;
+// Show "Download CV" only if the file exists
+fetch("cv/Osman_Mazinov_CV.pdf", { method: "HEAD" })
+  .then((r) => {
+    if (r.ok) $("#cv").hidden = false;
+  })
+  .catch(() => {});
 
-  // added title of page
-  window.parent.document.title = name;
-}
-
-/**
- * Populates bio to the HTML page.
- *
- * @function
- *
- * @param {Array} items - An array of objects that contain bio information.
- * @param {string} id - The id of the HTML element to which bio will be appended.
- *
- * @returns {void}
- */
-
-function populateBio(items, id) {
-  const bioTag = document.getElementById(id);
-  items.forEach((bioItem) => {
-    const p = getElement("p", null);
-    p.innerHTML = bioItem;
-    bioTag.append(p);
-  });
-}
-
-/**
- * Populates skills to the HTML page.
- *
- * @function
- *
- * @param {Array} items - An array of objects that contain skill information.
- * @param {string} id - The id of the HTML element to which skills will be appended.
- *
- * @returns {void}
- */
-
-function populateSkills(items, id) {
-  const skillsTag = document.getElementById(id);
-  items.forEach(({ skillName, color, percentage }) => {
-    const h3 = getElement("h3", null);
-    h3.innerHTML = skillName;
-
-    const divProgress = getElement("div", "progress");
-    const divProgressBar = getElement("div", `progress-bar color-${color}`);
-    divProgressBar.style = `width: ${percentage}%`;
-    divProgress.append(divProgressBar);
-
-    const divProgressWrap = getElement("div", "progress-wrap");
-    divProgressWrap.append(h3, divProgress);
-
-    const divAnimateBox = getElement("div", "col-md-6 animate-box");
-    divAnimateBox.append(divProgressWrap);
-
-    skillsTag.append(divAnimateBox);
-  });
-}
-
-/**
- * Populates projects to the HTML page.
- *
- * @function
- *
- * @param {Array} items - An array of objects that contain project information.
- * @param {string} id - The id of the HTML element to which projects will be appended.
- *
- * @returns {void}
- */
-
-function populateProjects(items, id) {
-  let projectdesign = document.getElementById(id);
-
-  let h4 = document.createElement("h4");
-  h4.className = "project-heading";
-
-  let a = document.createElement("a");
-  a.target = "_blank";
-
-  let img = document.createElement("img");
-  img.className = "img-fluid";
-
-  let divResumeContentLeft = document.createElement("div");
-  divResumeContentLeft.className = "resume-content";
-  divResumeContentLeft.id = "left-div";
-  divResumeContentLeft.append(img);
-
-  let divResumeContentRight = document.createElement("div");
-  divResumeContentRight.className = "resume-content";
-  divResumeContentRight.id = "right-div";
-
-  let p = document.createElement("p");
-  p.className = "project-description";
-
-  let divSpan = document.createElement("div");
-
-  let divSubHeading = document.createElement("div");
-  divSubHeading.className = "sub-heading";
-  divSubHeading.append(p);
-  divSubHeading.append(divSpan);
-  divResumeContentRight.append(divSubHeading);
-
-  let divResumeItem = document.createElement("div");
-  divResumeItem.className = "resume-item";
-  divResumeItem.append(divResumeContentLeft);
-  divResumeItem.append(divResumeContentRight);
-  a.append(divResumeItem);
-
-  let divProjectCard = document.createElement("div");
-  divProjectCard.className = "project-card";
-  divProjectCard.append(a);
-
-  let li = document.createElement("li");
-  li.append(divProjectCard);
-
-  let hr = document.createElement("hr");
-
-  for (let i = 0; i < items.length; i++) {
-    h4.innerHTML = items[i].projectName;
-    a.href = items[i].preview;
-
-    img.src = items[i].image;
-
-    p.innerHTML = items[i].summary;
-
-    divSpan.innerHTML = "";
-    for (let k = 0; k < items[i].techStack.length; k++) {
-      let span = document.createElement("span");
-      span.className = "badge badge-secondary";
-      span.innerHTML = items[i].techStack[k];
-      divSpan.append(span);
-    }
-
-    projectdesign.append(li.cloneNode(true));
-
-    if (i != items.length - 1) {
-      projectdesign.append(hr.cloneNode(true));
-    }
-  }
-}
-
-/**
- * Populate the HTML timeline with items.
- * @param {Array} items - An array of objects that represent the timeline items.
- * @param {string} id - The id of the main container element in the HTML.
- * @property {string} items[].subtitle - The subtitle of the timeline item.
- * @property {string} items[].duration - The duration of the timeline item.
- * @property {string} items[].title - The title of the timeline item.
- * @property {Array} items[].details - An array of details for the timeline item.
- * @property {Array} items[].tags - An array of tags for the timeline item.
- * @property {string} items[].icon - The name of the font awesome icon to use.
- */
-function populateExp_Edu(items, id) {
-  let mainContainer = document.getElementById(id);
-
-  for (let i = 0; i < items.length; i++) {
-    let spanTimelineSublabel = document.createElement("span");
-    spanTimelineSublabel.className = "timeline-sublabel";
-    spanTimelineSublabel.innerHTML = items[i].subtitle;
-
-    let spanh2 = document.createElement("span");
-    spanh2.innerHTML = items[i].duration;
-
-    let h2TimelineLabel = document.createElement("h2");
-    h2TimelineLabel.innerHTML = items[i].title;
-    h2TimelineLabel.append(spanh2);
-
-    let divTimelineLabel = document.createElement("div");
-    divTimelineLabel.className = "timeline-label";
-    divTimelineLabel.append(h2TimelineLabel);
-    divTimelineLabel.append(spanTimelineSublabel);
-
-    for (let j = 0; j < items[i].details.length; j++) {
-      let pTimelineText = document.createElement("p");
-      pTimelineText.className = "timeline-text";
-      pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
-      divTimelineLabel.append(pTimelineText);
-    }
-
-    let divTags = document.createElement("div");
-    for (let j = 0; j < items[i].tags.length; j++) {
-      let spanTags = document.createElement("span");
-      spanTags.className = "badge badge-secondary";
-      spanTags.innerHTML = items[i].tags[j];
-      divTags.append(spanTags);
-    }
-    divTimelineLabel.append(divTags);
-
-    let iFa = document.createElement("i");
-    iFa.className = "fa fa-" + items[i].icon;
-
-    let divTimelineIcon = document.createElement("div");
-    divTimelineIcon.className = "timeline-icon color-5";
-    divTimelineIcon.append(iFa);
-
-    let divTimelineEntryInner = document.createElement("div");
-    divTimelineEntryInner.className = "timeline-entry-inner";
-    divTimelineEntryInner.append(divTimelineIcon);
-    divTimelineEntryInner.append(divTimelineLabel);
-
-    let article = document.createElement("article");
-    article.className = "timeline-entry animate-box";
-    article.append(divTimelineEntryInner);
-
-    mainContainer.append(article);
-  }
-
-  let divTimelineIcon = document.createElement("div");
-  divTimelineIcon.className = "timeline-icon color-5";
-
-  let divTimelineEntryInner = document.createElement("div");
-  divTimelineEntryInner.className = "timeline-entry-inner";
-  divTimelineEntryInner.append(divTimelineIcon);
-
-  let article = document.createElement("article");
-  article.className = "timeline-entry begin animate-box";
-  article.append(divTimelineEntryInner);
-
-  mainContainer.append(article);
-}
-
-/**
- * Populate links in the specified footer section with provided data.
- *
- * @param {Array} items - Array of objects containing data for links
- * @param {String} id - Id of the footer section in which the links will be populated
- *
- * @return {undefined}
- */
-function populateLinks(items, id) {
-  let footer = document.getElementById(id);
-
-  items.forEach(function (item) {
-    if (item.label !== "copyright-text") {
-      let span = document.createElement("span");
-      span.className = "col";
-
-      let p = document.createElement("p");
-      p.className = "col-title";
-      p.innerHTML = item.label;
-      span.append(p);
-
-      let nav = document.createElement("nav");
-      nav.className = "col-list";
-
-      let ul = document.createElement("ul");
-      item.data.forEach(function (data) {
-        let li = document.createElement("li");
-        let a = document.createElement("a");
-        if (data.link) {
-          a.href = data.link;
-          a.target = "_blank";
-        }
-        if (data.func) {
-          a.setAttribute("onclick", data.func);
-        }
-        a.innerHTML = data.text;
-
-        li.append(a);
-        ul.append(li);
-      });
-      nav.append(ul);
-      span.append(nav);
-      footer.append(span);
-    }
-
-    if (item.label === "copyright-text") {
-      let div = document.createElement("div");
-      div.className = "copyright-text no-print";
-      item.data.forEach(function (copyright) {
-        let p = document.createElement("p");
-        p.innerHTML = copyright;
-        div.append(p);
-      });
-      footer.append(div);
-    }
-  });
-}
-
-/**
- * Creates a new element with specified tag name and class name.
- *
- * @param {string} tagName - The tag name of the element.
- * @param {string} className - The class name of the element.
- *
- * @return {HTMLElement} The newly created element.
- */
-function getElement(tagName, className) {
-  let item = document.createElement(tagName);
-  item.className = className;
-  return item;
-}
-
-populateBio(bio, "bio");
-
-populateSkills(skills, "skills");
-
-fetchGitConnectedData(gitConnected);
-
-populateProjects(webProjects, "web-projects");
-populateProjects(softwareProjects, "software-projects");
-populateProjects(embeddedProjects, "embedded-projects");
-
-populateExp_Edu(experience, "experience");
-populateExp_Edu(education, "education");
-
-populateLinks(footer, "footer");
+// Scroll-spy
+const navLinks = [...document.querySelectorAll("#menu a")];
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        navLinks.forEach((a) =>
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + en.target.id,
+          ),
+        );
+      }
+    });
+  },
+  { rootMargin: "-40% 0px -55% 0px" },
+);
+document.querySelectorAll("main section[id]").forEach((s) => io.observe(s));
