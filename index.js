@@ -118,28 +118,34 @@ const links = footer
       `<a href="${esc(d.link)}" target="_blank" rel="noopener">${esc(d.text)}</a>`,
   );
 $("#footer").innerHTML =
-  `<span>� ${new Date().getFullYear()} Osman Mazinov</span>${links.join("")}`;
+  `<span>© ${new Date().getFullYear()} Osman Mazinov</span>${links.join("")}`;
 
 // Theme toggle (dark by default, choice is remembered)
 const themeBtn = $("#theme");
-const applyTheme = (t) => {
+const applyTheme = (t, save = false) => {
   document.documentElement.dataset.theme = t;
   const toLight = t === "dark";
-  themeBtn.innerHTML = `<span aria-hidden="true">${toLight ? "?" : "?"}</span><span class="lbl">${toLight ? "Light" : "Dark"}</span>`;
+  themeBtn.innerHTML = `<span aria-hidden="true">${toLight ? "☀" : "☾"}</span><span class="lbl">${toLight ? "Light" : "Dark"}</span>`;
   themeBtn.setAttribute(
     "aria-label",
     toLight ? "Switch to light theme" : "Switch to dark theme",
   );
-  try {
-    localStorage.setItem("theme", t);
-  } catch (e) {}
+  if (save) {
+    try {
+      localStorage.setItem("theme", t);
+    } catch (e) {}
+  }
 };
-applyTheme(
-  document.documentElement.dataset.theme === "light" ? "light" : "dark",
-);
+
+const systemTheme = matchMedia("(prefers-color-scheme: light)").matches
+  ? "light"
+  : "dark";
+applyTheme(document.documentElement.dataset.theme || systemTheme);
+
 themeBtn.addEventListener("click", () =>
   applyTheme(
     document.documentElement.dataset.theme === "dark" ? "light" : "dark",
+    true,
   ),
 );
 
