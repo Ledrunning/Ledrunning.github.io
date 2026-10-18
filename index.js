@@ -42,7 +42,7 @@ const renderProjects = (list) => {
         <h3>${esc(p.projectName)}</h3>
         <p>${esc(clean(p.summary))}</p>
         ${tags(p.techStack.slice(0, 6))}
-        <a class="more" href="${esc(p.preview)}" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="more" href="${esc(p.preview)}" target="_blank" rel="noopener">View on GitHub ></a>
       </div>
     </article>`,
     )
@@ -118,14 +118,14 @@ const links = footer
       `<a href="${esc(d.link)}" target="_blank" rel="noopener">${esc(d.text)}</a>`,
   );
 $("#footer").innerHTML =
-  `<span>© ${new Date().getFullYear()} Osman Mazinov</span>${links.join("")}`;
+  `<span>� ${new Date().getFullYear()} Osman Mazinov</span>${links.join("")}`;
 
 // Theme toggle (dark by default, choice is remembered)
 const themeBtn = $("#theme");
 const applyTheme = (t) => {
   document.documentElement.dataset.theme = t;
   const toLight = t === "dark";
-  themeBtn.innerHTML = `<span aria-hidden="true">${toLight ? "☀" : "☾"}</span><span class="lbl">${toLight ? "Light" : "Dark"}</span>`;
+  themeBtn.innerHTML = `<span aria-hidden="true">${toLight ? "?" : "?"}</span><span class="lbl">${toLight ? "Light" : "Dark"}</span>`;
   themeBtn.setAttribute(
     "aria-label",
     toLight ? "Switch to light theme" : "Switch to dark theme",

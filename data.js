@@ -89,7 +89,7 @@ export const education = [
     icon: "book",
   },
   {
-    title: "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelorâ€™s and Masterâ€™s level",
+    title: "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelor’s and Master’s level",
     duration: "2008 - 2009",
     subtitle: "Sevastopol State Technical University",
     details: [],
