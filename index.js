@@ -150,7 +150,7 @@ themeBtn.addEventListener("click", () =>
 );
 
 // Show "Download CV" only if the file exists
-fetch("cv/Osman_Mazinov_CV.pdf", { method: "HEAD" })
+fetch("cv/osman_mazinov_cv.pdf", { method: "HEAD" })
   .then((r) => {
     if (r.ok) $("#cv").hidden = false;
   })
