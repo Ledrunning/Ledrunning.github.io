@@ -1,16 +1,13 @@
 export const bio = [
-  `With over 10 years of expertise, I have developed a range of software solutions for various domains, such as healthcare, 
-    fintech, aviation, and industrial engineering. I have expertise in web development, desktop applications, and embedded systems, 
-    using C#, .NET frameworks, and other technologies. My background in electronics engineering enables 
-    me to combine interdisciplinary knowledge and apply it to complex and innovative projects. 
-    I am passionate about learning new skills and exploring new challenges. 
-    Also I contribute to open source development and I interested in artificial intelligence, computer vision, cloud computing, and electronics.`,
+  `Senior Backend Engineer with 10+ years of experience designing and building distributed systems in C# and .NET across fintech, aviation, and industrial domains. 
+   Specialized in backend architecture, system reliability, and integration of complex systems, including hardware and industrial protocols. 
+   Experienced in building production-grade services with secure communication, high availability, and cloud-based architectures.`,
 ];
 
 export const skills = [
   {
     title: "Languages",
-    skillName: "C, C#, TypeScript",
+    skillName: "C, C#, JavaScript, TypeScript",
     color: "1",
     percentage: "90",
   },
@@ -22,7 +19,7 @@ export const skills = [
   },
   {
     title: "Design",
-    skillName: "HTML, XAML, GTK, Bootstrap",
+    skillName: "HTML, XAML, GTK, Bootstrap, Foundation",
     color: "4",
     percentage: "60",
   },
@@ -64,19 +61,19 @@ export const skills = [
   },
   {
     title: "Tools",
-    skillName: "Postman, NServiceBus Analyzer, Chrome DevTools",
+    skillName: "Postman, NServiceBus Analyzer, Chrome DevTools, Grafana",
     color: "3",
     percentage: "80",
   },
   {
     title: "IDE",
-    skillName: "VS Code, Visual Studio, ReSharper",
+    skillName: "VS Code, Visual Studio, Rider, ReSharper",
     color: "6",
     percentage: "100",
   },
   {
     title: "Protocols",
-    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN",
+    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN, IO-Link",
     color: "1",
     percentage: "80",
   },
@@ -88,15 +85,11 @@ export const education = [
     duration: "2023 - 2024",
     subtitle: "Milling Sprachenschulen - Milling GmbH",
     details: [],
-    tags: [
-      "Sprachschule",
-      "Deutsch",
-      "Deutsche Sprache",
-    ],
+    tags: ["Sprachschule", "Deutsch", "Deutsche Sprache"],
     icon: "book",
   },
   {
-    title: "Biomedical electronics - Master Degree",
+    title: "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelor’s and Master’s level",
     duration: "2008 - 2009",
     subtitle: "Sevastopol State Technical University",
     details: [],
@@ -131,21 +124,41 @@ export const projects = {
     {
       projectName: "Bitcoin Query",
       image: "images/bitcoinQuery.png",
-      summary: "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar.",
+      summary:
+        "Client-server application for retrieving and querying the daily closing prices of bitcoin in US-Dollar.",
       preview: "https://github.com/Ledrunning/BitcoinQuery",
-      techStack: ["C#", "WPF", "SignalR", "Autofac",  "NLog", ".NET 8", "REST API", "Hangfire", "Unit Tests"],
+      techStack: [
+        "C#",
+        "WPF",
+        "SignalR",
+        "Autofac",
+        "NLog",
+        ".NET 8",
+        "REST API",
+        "Hangfire",
+        "Unit Tests",
+      ],
     },
     {
       projectName: "Image-Uploader",
       image: "images/imageUploader.png",
-      summary: "The application allows users to upload images to the server and view them on a desktop application.",
+      summary:
+        "The application allows users to upload images to the server and view them on a desktop application.",
       preview: "https://github.com/Ledrunning/Image-Uploader",
-      techStack: ["Vue.js", "C#", "WPF", "ASP .NET Core 2.0", "REST API", "MSSQL"],
+      techStack: [
+        "Vue.js",
+        "C#",
+        "WPF",
+        "ASP .NET Core 2.0",
+        "REST API",
+        "MSSQL",
+      ],
     },
     {
       projectName: "githubvue",
       image: "images/githubVue.png",
-      summary: "Web client displays information about GitHub repositories, including repository details and recent commits.",
+      summary:
+        "Web client displays information about GitHub repositories, including repository details and recent commits.",
       preview: "https://github.com/Ledrunning/githubvue",
       techStack: ["Vue.js", "HTML", "CSS", "REST API"],
     },
@@ -154,42 +167,50 @@ export const projects = {
     {
       projectName: "Employees Accounting",
       image: "images/empAccounting.png",
-      summary: "Client-server application designed for employee accounting utilizing face detection technology.",
+      summary:
+        "Client-server application designed for employee accounting utilizing face detection technology.",
       preview: "https://github.com/Ledrunning/EmployeesAccounting",
       techStack: ["WPF", "ASP .NET6", "REST API", "MSSQL", "EMGU CV"],
     },
     {
       projectName: "Airplane Simulation Trajectory",
       image: "images/aircraftTrajectory.png",
-      summary: "Airplane Simulation Trajectory is a WPF (Windows Presentation Foundation) 3D application that demonstrates" + 
-                "the simulation of an airplane's trajectory over the ground. The application utilizes the Helix Toolkit (Helix3D) for rendering 3D graphics," + 
-                "providing an immersive experience of tracking the path of an airplane.",
+      summary:
+        "Airplane Simulation Trajectory is a WPF 3D application that demonstrates " +
+        "the simulation of an airplane's trajectory over the ground.",
       preview: "https://github.com/Ledrunning/AirplaneSimulationTrajectory",
-      techStack: ["C#", "WPF", ".NET Framework 4.8 ", "MVVM", "SimpleInjector", "Helix3D"],
+      techStack: [
+        "C#",
+        "WPF",
+        ".NET Framework 4.8 ",
+        "MVVM",
+        "SimpleInjector",
+        "Helix3D",
+      ],
     },
     {
       projectName: "VideoBroadcast",
       image: "images/videoBroadcast.png",
-      summary: "VideoBroadcast is a Client-Server application written in C# targeting .NET 4.6.1." + 
-               "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP, leveraging the power of the VLC library and the VlcDotNet wrapper.",
+      summary:
+        "VideoBroadcast is a Client-Server application written in C# " +
+        "It focuses on video broadcasting via protocols like RTP/RTSP or HTTP.",
       preview: "https://github.com/Ledrunning/VideoBroadcast",
-      techStack: ["C#", "Windows Forms", ".NET Framework 4.6", "VLC", "RTP/RTSP", "HTTP"],
+      techStack: [
+        "C#",
+        "Windows Forms",
+        ".NET Framework 4.6",
+        "VLC",
+        "RTP/RTSP",
+        "HTTP",
+      ],
     },
     {
       projectName: "FacialDetection",
       image: "images/faceDetection.jpg",
-      summary: "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu.", 
+      summary:
+        "Simple WPF MVVM Desktop application for facial detection in real time from web camera via Emgu.",
       preview: "https://github.com/Ledrunning/FacialDetection",
       techStack: ["C#", "WPF", ".NET Framework 4.7.1", "MVVM", "EmguCV"],
-    },
-    {
-      projectName: "WiFiOutdoorSensor",
-      image: "images/wifiOutdoorSens.png",
-      summary: "wireless outdoor temperature and humidity monitoring system. It uses ESP8266 for network communication," + 
-               "BMP180 for barometric pressure measurements, and DHT-22 for temperature and humidity data. Powered by a battery," + 
-               "it's designed to be low-power and can be accessed via a web server, an Android application, or a Windows desktop application.", 
-      preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
-      techStack: ["C++", "Android", "Java", "C#", "Windows Forms"],
     },
     {
       projectName: "TinnyMonitor",
@@ -201,12 +222,20 @@ export const projects = {
     {
       projectName: "uMap",
       image: "images/uMap.png",
-      summary: "Simple WPF MVVM application to display a world map using Open Street Map provider.",
+      summary:
+        "Simple WPF MVVM application to display a world map using Open Street Map provider.",
       preview: "https://github.com/Ledrunning/uMap",
       techStack: ["WPF", "MVVM", "Desktop", "C#", "OpenStreetMap"],
     },
   ],
   embeddedProjects: [
+    {
+      projectName: "WiFiOutdoorSensor",
+      image: "images/wifiOutdoorSens.png",
+      summary: "Wireless outdoor temperature and humidity monitoring system.",
+      preview: "https://github.com/Ledrunning/WiFiOutdoorSensor",
+      techStack: ["C++", "C#", "JavaScript", "Hardware", "Android/Java", "Web"],
+    },
     {
       projectName: "animationClock",
       image: "images/clock.png",
@@ -217,9 +246,8 @@ export const projects = {
     {
       projectName: "tiny_thermometer",
       image: "images/thermometer.png",
-      summary: "A simple temperature and humidity meter displaying values on an 8x2 LCD using" + 
-      "a DHT-22 sensor with a 5V external power supply on a small Avr microcontroller Attiny 2313 with 2Kb program memory." +
-      "The firmware is written in C language in Atmel Studio 7",
+      summary:
+        "A simple temperature and humidity meter displaying values on an 8x2 LCD using",
       preview: "https://github.com/Ledrunning/tiny_thermometer",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
@@ -233,7 +261,8 @@ export const projects = {
     {
       projectName: "LightController",
       image: "images/lightController.png",
-      summary: "Open source project to control light in the room, garage, street, house etc",
+      summary:
+        "Open source project to control light in the room, garage, street, house etc",
       preview: "https://github.com/Ledrunning/LightController",
       techStack: ["C", "Atmel", "Microcontrollers", "Hardware", "PCB"],
     },
@@ -242,22 +271,32 @@ export const projects = {
 
 export const experience = [
   {
-    title: "item – industrial applications",
+    title: "item Industrietechnik GmbH",
     duration: "May 2024 - Current",
-    subtitle: "Software Developer",
+    subtitle: "Software Engineer",
     details: [
-      "Software development for smart products",
-      "Development of middleware for hardware",
+      "Designed layered software architectures for industrial automation systems with a focus on reliability and long-term maintainability",
+      "Developed middleware APIs and backend services in .NET/C# for integration with industrial hardware and communication protocols (MQTT, Modbus, TCP/UDP)",
+      "Designed and implemented secure device communication using mTLS and authentication mechanisms for Edge environments",
+      "Collaborated with R&D teams to integrate industrial systems with remote monitoring and data collection solutions",
+      "Collaborated to system architecture decisions, integration strategies, and backend service design",
     ],
     tags: [
       "Avalonia",
       "Desktop development",
       ".NET Core MVC",
       ".NET6",
-      ".NET8", 
+      ".NET8",
+      ".NET9",
       "MSSQL",
       "PostgreSQL",
       "Razor",
+      "ESP-IDF",
+      "Embedded C",
+      "IoT",
+      "JavaScript",
+      "JQuery",
+      "Foundation",
     ],
     icon: "heartbeat",
   },
@@ -283,10 +322,11 @@ export const experience = [
   {
     title: "Arsis",
     duration: "Jul 2022 - Oct 2022",
-    subtitle: ".NET Developer",
+    subtitle: "Senior .NET Developer",
     details: [
-      "Developed portals for medicines accounting for leading international healthcare companies as a full-stack developer;",
-      "Developed server tools for a healthcare company;",
+      "Contributed to the design and development of secure enterprise web applications for Fortune 500 pharmaceutical clients",
+      "Designed and implemented automated inventory management systems for sensitive medical supply data across international markets",
+      "Ensured data integrity, GDPR compliance, and secure access control through RBAC and API security best practices",
     ],
     tags: [
       "TypeScript",
@@ -296,20 +336,21 @@ export const experience = [
       ".NET6",
       "MSSQL",
       "Razor",
+      "Azure Cosmos DB",
+      "Entity Framework",
+      "Software Design Patterns",
     ],
     icon: "truck ",
   },
   {
     title: "U - Tek",
     duration: "Jul 2018 - Jul 2022",
-    subtitle: "Software Engineer",
+    subtitle: "C# Developer",
     details: [
-      "Wrote corporate WPF and Windows Forms applications in C#;",
-      "Designed a smart storage system for wire reels;",
-      "Created the system for determining the slip coefficient on the runway;",
-      "Developed a multimedia entertainment system for passenger aircraft.",
-      "Wrote low-level and middleware API for cabin light control system.",
-      "Created file synchronization system from server to passengers seat media system via Syncthing using Syncthing API;",
+      "Architected and developed mission-critical fintech microservices for a UK-based platform, focusing on high-throughput processing, fraud detection, and scalable API design",
+      "Built backend and middleware components for an aircraft passenger multimedia system, including hardware integration APIs and real-time content synchronization",
+      "Developed safety-critical computation services for aviation systems (runway safety), achieving high reliability through extensive unit and integration testing",
+      "Designed and implemented control software for automated industrial storage systems, optimizing inventory placement and retrieval logic in constrained environments",
     ],
     tags: [
       "GStreamer",
@@ -325,6 +366,7 @@ export const experience = [
       "MSSQL",
       "SQLight",
       "Video/Audio Broadcasting",
+      "Nservicebus",
     ],
     icon: "heartbeat",
   },
@@ -333,9 +375,7 @@ export const experience = [
     duration: "Sep 2017 - Jul 2018",
     subtitle: ".NET Developer",
     details: [
-      "Developed the financial product for a UK fintech company as a back-end developer;",
-      "Worked with Open CV and EMGU CV for facial detection and recognition;",
-      "Created a desktop application to keep track of serial numbers;",
+      " Developed enterprise applications (WPF, WinForms) integrating OpenCV and EmguCV for face detection and recognition",
     ],
     tags: [
       "WPF",
@@ -352,9 +392,10 @@ export const experience = [
     duration: "Jul 2014 - Jul 2018",
     subtitle: "Electronic Engineer",
     details: [
-      "Development of embedded devices, and firmware for AVR and STM32 microcontrollers;",
-      "Raspberry Pi, PLC, and industrial controllers programming;",
-      "Wrote desktop application for frequency converter PID tracing and chart drawing via Modbus RTU;",
+      "Designed Hardware",
+      "Developed firmware for AVR and STM32 microcontrollers",
+      "Programmed PLCs and industrial controllers, including Raspberry Pi integration",
+      "Built a desktop diagnostic tool for frequency converter analysis (PID tracing, real-time charting) via Modbus RTU",
     ],
     tags: [
       "WPF",
@@ -372,8 +413,8 @@ export const experience = [
     duration: "Sep 2011 - Jul 2014",
     subtitle: "Electronic Engineer",
     details: [
-      "Modeled and developed electronic devices and ship automation modules;",
-      "Created software for PLC;",
+      "Managed the full development cycle of electronic devices, including schematic design and PCB layout",
+      "Developed firmware in Embedded C for Atmel AVR microcontrollers",
     ],
     tags: [
       "Hardware Development",
@@ -391,8 +432,8 @@ export const experience = [
     duration: "Sep 2011 - Jul 2014",
     subtitle: "Electronic Engineer",
     details: [
-      "Modeled and developed electronic devices and ship automation modules;",
-      "Created software for PLC;",
+      "Designed and developed custom electronic devices and hardware components for industrial applications",
+      "Engineered automation modules and programmed PLC logic for critical ship systems",
     ],
     tags: [
       "Hardware Development",
@@ -407,73 +448,18 @@ export const experience = [
   },
 ];
 
-export const contact = [
-  {
-    label:
-      "Please feel welcome to contact me via email. Whether you would like to discuss a technology or a business opportunity, I would be delighted to hear from you.",
-    data: [
-        {
-            text:"",
-            link:""
-        },
-    ],
-  },
-];
-
 export const footer = [
-  {
-    label: "Dev Profiles",
-    data: [
-      {
-        text: "Stackoverflow",
-        link: "https://stackoverflow.com/users/8070900/jdo",
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/Ledrunning",
-      },
-      {
-        text: "Reddit",
-        link: "https://www.reddit.com/user/Ledrunnin/",
-      },
-    ],
-  },
-  {
-    label: "Resources",
-    data: [
-      {
-        text: "Enable Dark/Light Mode",
-        func: "enableDarkMode()",
-      },
-      {
-        text: "Print this page",
-        func: "window.print()",
-      },
-      {
-        text: "Clone this page",
-        link: "https://github.com/Ledrunning/Ledrunning.github.io",
-      },
-    ],
-  },
   {
     label: "Social Profiles",
     data: [
       {
         text: "Linkedin",
-        link: "https://www.linkedin.com/in/osman-mazinov-lennarovich/",
+        link: "https://www.linkedin.com/in/osman-mazinov/",
       },
       {
         text: "Xing",
         link: "https://www.xing.com/profile/Osman_Mazinov/",
       },
-    ],
-  },
-  {
-    label: "copyright-text",
-    data: [
-      "The core powered by Vinay Somawat.",
-      "&copy; No Copyrights. Feel free to use this template.",
-      "The template was taken from <a href='https://github.com/vinaysomawat/vinaysomawat.github.io'>Vinay Somawat</a>",
     ],
   },
 ];
