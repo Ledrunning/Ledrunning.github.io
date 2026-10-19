@@ -23,14 +23,16 @@ $("#lead").textContent = bioText.split(". ").slice(0, 1).join(". ") + ".";
 $("#bio").innerHTML = bio.map((p) => `<p>${esc(clean(p))}</p>`).join("");
 
 // Projects: filter chips + cards
+// Projects: filter chips + cards
+const webSoft = [...projects.webProjects, ...projects.softwareProjects];
+const all = [...webSoft, ...projects.embeddedProjects];
+
 const groups = [
-  ["All", null],
-  ["Embedded", projects.embeddedProjects],
+  ["Web & Software", webSoft], // shown on page load
   ["Desktop / Software", projects.softwareProjects],
-  ["Web", projects.webProjects],
+  ["Embedded", projects.embeddedProjects],
+  ["All", all],
 ];
-const all = groups.slice(1).flatMap(([, list]) => list);
-groups[0][1] = all;
 
 const renderProjects = (list) => {
   $("#project-grid").innerHTML = list
@@ -63,7 +65,7 @@ $("#filters").addEventListener("click", (e) => {
     .forEach((x) => x.setAttribute("aria-pressed", x === b));
   renderProjects(groups[b.dataset.i][1]);
 });
-renderProjects(all);
+renderProjects(groups[0][1]);
 
 // Skills: grouped tags, duplicates removed across groups
 const seen = new Set();
