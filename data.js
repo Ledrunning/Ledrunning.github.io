@@ -89,7 +89,8 @@ export const education = [
     icon: "book",
   },
   {
-    title: "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelor's and Master's level",
+    title:
+      "Biomedical electronics - Specialist Degree / Evaluated by ZAB: German university degree, between Bachelor's and Master's level",
     duration: "2008 - 2009",
     subtitle: "Sevastopol State Technical University",
     details: [],
@@ -164,6 +165,14 @@ export const projects = {
     },
   ],
   softwareProjects: [
+    {
+      projectName: "TinyPlayer",
+      image: "images/tinyPlayer.png",
+      summary:
+        "A lightweight video player built with WPF, GStreamer, and the WPF-UI framework featuring a modern Fluent Design interface.",
+      preview: "https://github.com/Ledrunning/TinyPlayer",
+      techStack: ["WPF", "C#", ".NET10", "GStreamer", "Videosink", "Video piplines"],
+    },
     {
       projectName: "Employees Accounting",
       image: "images/empAccounting.png",
