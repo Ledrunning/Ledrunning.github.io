@@ -1,33 +1,33 @@
 export const bio = [
-  `Senior Backend Engineer with 10+ years of experience designing and building distributed systems in C# and .NET across fintech, aviation, and industrial domains. 
-   Specialized in backend architecture, system reliability, and integration of complex systems, including hardware and industrial protocols. 
-   Experienced in building production-grade services with secure communication, high availability, and cloud-based architectures.`,
+  `Senior Software Engineer with 10+ years of experience in software development, including commercial C#/.NET development since 2017. 
+  Specializing in backend engineering, distributed systems, REST APIs and complex system integrations across fintech, 
+  aviation, healthcare and industrial domains. Strong background in designing and developing backend services, 
+  microservices and asynchronous communication workflows. Experienced in building reliable integrations, 
+  implementing secure service-to-service communication (mTLS) and working with messaging platforms such as RabbitMQ, 
+  NServiceBus and Azure Service Bus. Proficient in PostgreSQL, SQL Server, Docker and CI/CD, 
+  with a strong focus on software design, maintainable code, system reliability and code quality.`,
 ];
 
 export const skills = [
   {
-    title: "Languages",
+    title: "Languages:",
     skillName: "C, C#, JavaScript, TypeScript",
     color: "1",
-    percentage: "90",
   },
   {
-    title: "Frameworks/Libraries",
-    skillName: `.NET Core, .NET Framework, Vue.js`,
+    title: "Backend:",
+    skillName: `NET 6/8/10, ASP.NET Core, REST APIs, Microservices, Distributed Systems, Middleware`,
     color: "6",
-    percentage: "85",
   },
   {
-    title: "Design",
-    skillName: "HTML, XAML, GTK, Bootstrap, Foundation",
+    title: "Architecture & Design:",
+    skillName: "Service Integration, Clean Architecture, SOLID, Design Patterns, Clean Code, EventDriven Architecture",
     color: "4",
-    percentage: "60",
   },
   {
-    title: "Databases:",
-    skillName: "SQLite, MongoDB, MSSQL, Cosmos DB",
+    title: "Messaging & Integration:",
+    skillName: "RabbitMQ, NServiceBus, Azure Service Bus, MQTT, TCP/IP, UDP, mTLS",
     color: "4",
-    percentage: "70",
   },
   {
     title: "ORMs and Database Tools:",
@@ -36,47 +36,25 @@ export const skills = [
     percentage: "80",
   },
   {
-    title: "Tools & Platforms:",
-    skillName: "Azure, Docker, Git, Jira, AppVeyor, Confluence, YouTrack",
+    title: "Data Access & Databases:",
+    skillName: "Entity Framework Core, Dapper, Fluent API, ADO.NET, PostgreSQL, SQL Server,MongoDB, Azure Cosmos DB, Elasticsearch",
     color: "4",
-    percentage: "85",
   },
   {
-    title: "Principles & Practices:",
-    skillName: "SOLID, OOP, DRY, CI/CD",
+    title: "Quality & Testing:",
+    skillName: "Unit Testing, Integration Testing, SonarQube, Roslyn, Static Analysis, Code Reviews",
     color: "4",
-    percentage: "90",
   },
   {
-    title: "Version Control",
-    skillName: "GitHub, JIRA, Bitbucket",
+    title: "Infrastructure & Monitoring:",
+    skillName: "Docker, GitHub Actions, Azure DevOps, Grafana, Prometheus, ELK Stack",
     color: "7",
-    percentage: "90",
   },
   {
-    title: "Unit Test",
-    skillName: " MSTest, Nunit, Moq",
+    title: "Additional:",
+    skillName: "Industrial protocols, Vue.js, TypeScript/JavaScript, WPF, WinForms, Avalonia, Cloud: Azure (working knowledge)",
     color: "7",
-    percentage: "70",
-  },
-  {
-    title: "Tools",
-    skillName: "Postman, NServiceBus Analyzer, Chrome DevTools, Grafana",
-    color: "3",
-    percentage: "80",
-  },
-  {
-    title: "IDE",
-    skillName: "VS Code, Visual Studio, Rider, ReSharper",
-    color: "6",
-    percentage: "100",
-  },
-  {
-    title: "Protocols",
-    skillName: "I2C, SPI, UART, Modbus TCP/RTU, CAN, IO-Link",
-    color: "1",
-    percentage: "80",
-  },
+  }
 ];
 
 export const education = [
