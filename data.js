@@ -123,7 +123,7 @@ export const projects = {
       ],
     },
     {
-      projectName: "CrudBor",
+      projectName: "CrudBot",
       image: "images/crudbot.png",
       summary:
         "Telegram bot that returns current weather from OpenWeather API and OpenWeatherGeo",
