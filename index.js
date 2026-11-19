@@ -25,12 +25,11 @@ $("#bio").innerHTML = bio.map((p) => `<p>${esc(clean(p))}</p>`).join("");
 // Projects: filter chips + cards
 // Projects: filter chips + cards
 const webSoft = [...projects.webProjects, ...projects.softwareProjects];
-const all = [...webSoft, ...projects.embeddedProjects];
+const all = [...webSoft, ...projects.softwareProjects];
 
 const groups = [
   ["Web & Software", webSoft], // shown on page load
   ["Desktop / Software", projects.softwareProjects],
-  ["Embedded", projects.embeddedProjects],
   ["All", all],
 ];
 
