@@ -150,13 +150,6 @@ themeBtn.addEventListener("click", () =>
   ),
 );
 
-// Show "Download CV" only if the file exists
-fetch("cv/osman_mazinov_cv.pdf", { method: "HEAD" })
-  .then((r) => {
-    if (r.ok) $("#cv").hidden = false;
-  })
-  .catch(() => {});
-
 // Scroll-spy
 const navLinks = [...document.querySelectorAll("#menu a")];
 const io = new IntersectionObserver(
